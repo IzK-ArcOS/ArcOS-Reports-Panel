@@ -1,0 +1,7 @@
+div.content div.view {
+  padding: 15px;
+  flex-grow: 1;
+  max-width: calc(100% - 250px);
+  overflow-y: scroll;
+  height: 100%;
+}

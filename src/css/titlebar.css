@@ -1,0 +1,24 @@
+@import url("./titlebar/controls.css");
+@import url("./titlebar/title.css");
+@import url("./titlebar/big.css");
+@import url("./titlebar/left.css");
+
+div.titlebar div.controls button:active {
+  opacity: 0.2;
+}
+
+div.titlebar {
+  height: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  display: flex;
+  z-index: 100;
+  background-color: var(--win-bg);
+  border-bottom: var(--win-border);
+  font-size: 16px;
+}
+
+div.titlebar * {
+  vertical-align: middle;
+}

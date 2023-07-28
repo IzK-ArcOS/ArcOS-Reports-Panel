@@ -1,0 +1,6 @@
+div.content div.sidebar {
+  height: 100%;
+  width: 250px;
+  border-right: var(--win-border);
+  padding: 10px;
+}
