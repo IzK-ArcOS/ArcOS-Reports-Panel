@@ -1,0 +1,15 @@
+import { get, writable } from "svelte/store";
+import type { Notif, NotifStore } from "./interface";
+
+export const NotificationStore = writable<NotifStore>({});
+
+export function Notification(notif: Notif) {
+  const store = get(NotificationStore);
+  const id = Math.floor(Math.random() * 1e9);
+
+  store[id] = notif;
+
+  NotificationStore.set(store);
+
+  return id;
+}

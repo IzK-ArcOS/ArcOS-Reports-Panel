@@ -7,10 +7,12 @@
   import MobileBlock from "./lib/MobileBlock.svelte";
   import { LoginFromStore } from "./ts/pb/auth";
   import { Token } from "./ts/pb/main";
+  import { tryGitHub } from "./ts/github/main";
 
   let loading = false;
 
   onMount(async () => {
+    await tryGitHub();
     loading = true;
     await LoginFromStore();
     loading = false;

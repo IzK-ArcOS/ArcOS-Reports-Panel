@@ -1,0 +1,15 @@
+div.reportlist div.row div.segment div.hidden {
+  width: fit-content;
+  height: 20px;
+  color: var(--clr-yellow-fg);
+  background-color: var(--clr-yellow-bg) !important;
+  border-radius: 5px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+div.reportlist div.row div.segment div.hidden span.material-icons-round {
+  font-size: 14px;
+}

@@ -1,10 +1,11 @@
 @import url("./row/header.css");
-
+@import url("./row/segment.css");
+@import url("./row/hidden.css");
 div.reportlist div.row {
   display: flex;
   width: 100%;
-  gap: 20px;
-  height: 25px;
+  gap: 5px;
+  height: 30px;
   align-items: center;
   padding: 0 5px;
   border-radius: 5px;
@@ -15,59 +16,8 @@ div.reportlist div.row.solved {
   color: var(--clr-green-fg);
 }
 
-div.reportlist div.row.closed {
+div.reportlist div.row.closed:not(.solved) {
   font-style: italic;
-  background-color: var(--clr-orange-bg);
-  color: var(--clr-orange-fg);
-}
-
-div.reportlist div.row div.segment {
-  --w: 15%;
-  width: var(--w);
-  max-width: var(--w);
-  min-width: var(--w);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-div.reportlist div.row div.segment.mleft {
-  margin-left: auto;
-}
-
-div.reportlist div.row div.segment.small {
-  --w: 7.5%;
-}
-
-div.reportlist div.row div.segment.grow {
-  flex-grow: 1;
-  --w: unset;
-}
-
-div.reportlist div.row div.segment.sad {
-  opacity: 0.4;
-}
-
-div.reportlist div.row div.segment.blue {
-  color: var(--clr-blue-fg);
-}
-
-div.reportlist div.row div.segment.mono {
-  font-family: "Source Code Pro", monospace;
-}
-
-div.reportlist div.row div.segment div.hidden {
-  width: fit-content;
-  height: 20px;
+  background-color: var(--clr-red-bg);
   color: var(--clr-red-fg);
-  background-color: var(--clr-red-bg) !important;
-  border-radius: 5px;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-div.reportlist div.row div.segment div.hidden span.material-icons-round {
-  font-size: 14px;
 }

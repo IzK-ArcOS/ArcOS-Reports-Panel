@@ -1,0 +1,20 @@
+div.reportlist div.row div.segment.act {
+  gap: 10px;
+}
+div.reportlist div.row div.segment.act button.material-icons-round {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: var(--fg);
+  height: inherit;
+  font-size: 18px;
+}
+
+div.reportlist div.row div.segment.act button.material-icons-round.resolved {
+  color: var(--clr-green-fg);
+}
+
+div.reportlist div.row div.segment.act button.material-icons-round.closed {
+  color: var(--clr-red-fg);
+}

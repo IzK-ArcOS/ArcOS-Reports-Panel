@@ -6,6 +6,7 @@
 @import url("./content.css");
 @import url("./scrollbars.css");
 @import url("./reportlist.css");
+@import url("./elements.css");
 
 *:not(.material-icons-round) {
   font-family: "Inter", sans-serif;

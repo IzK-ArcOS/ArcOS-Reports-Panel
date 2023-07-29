@@ -1,4 +1,5 @@
 <div class="row head">
+  <div class="segment icon" />
   <div class="segment grow">Title</div>
   <div class="segment">Author</div>
   <div class="segment">Server</div>

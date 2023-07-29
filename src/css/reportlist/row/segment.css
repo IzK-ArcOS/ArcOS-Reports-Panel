@@ -1,0 +1,46 @@
+@import url("./segment/actions.css");
+
+div.reportlist div.row div.segment {
+  --w: 15%;
+  width: var(--w);
+  max-width: var(--w);
+  min-width: var(--w);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+div.reportlist div.row div.segment.mleft {
+  margin-left: auto;
+}
+
+div.reportlist div.row div.segment.small {
+  --w: 7.5%;
+}
+
+div.reportlist div.row div.segment.grow {
+  flex-grow: 1;
+  --w: unset;
+}
+
+div.reportlist div.row div.segment.sad {
+  opacity: 0.4;
+}
+
+div.reportlist div.row div.segment.self {
+  color: var(--clr-aqua-fg);
+}
+
+div.reportlist div.row div.segment.mono {
+  font-family: "Source Code Pro", monospace;
+}
+
+div.reportlist div.row div.segment.icon {
+  --w: 24px;
+}
+
+div.reportlist div.row div.segment.icon img {
+  height: 20px;
+}

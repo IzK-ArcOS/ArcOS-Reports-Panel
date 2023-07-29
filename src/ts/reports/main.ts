@@ -5,6 +5,7 @@ import type { ReportRecord } from "./interface";
 export const Reports = writable<ReportRecord[]>();
 
 pb.collection("bugrep").subscribe("*", async () => {
+  Reports.set([]);
   Reports.set(await GetReports());
 });
 
