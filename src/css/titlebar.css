@@ -14,8 +14,8 @@ div.titlebar {
   padding: 5px;
   display: flex;
   z-index: 100;
-  background-color: var(--win-bg);
-  border-bottom: var(--win-border);
+  background-color: var(--bg);
+  border-bottom: var(--bg-border);
   font-size: 16px;
 }
 

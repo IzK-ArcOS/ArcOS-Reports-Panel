@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Dialog } from "../../../../ts/dialog/main";
   import { pb } from "../../../../ts/pb/main";
   import type { ReportRecord } from "../../../../ts/reports/interface";
   import { deleteReport } from "../../../../ts/reports/mutate";
@@ -21,7 +22,19 @@
   }
 
   async function deleteRep() {
-    await deleteReport(report.id);
+    Dialog({
+      title: "Confirm deletion",
+      message: `You are about to delete report ${report.id}. All data within this report will no longer be accessible by anyone, not even the author. This action cannot be reverted. Are you sure?`,
+      buttons: [
+        {
+          caption: "Delete",
+          async action() {
+            await deleteReport(report.id);
+          },
+        },
+        { caption: "Cancel", action() {} },
+      ],
+    });
   }
 </script>
 

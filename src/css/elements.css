@@ -8,6 +8,19 @@ button {
   height: 26px;
 }
 
+button:not(.material-icons-round):hover {
+  background-color: var(--button-glass-hover-bg);
+}
+
+button:active {
+  opacity: 0.4;
+  scale: 0.95;
+}
+
+button:disabled {
+  opacity: 0.4;
+}
+
 button.link {
   text-decoration: underline;
   text-underline-offset: 2px;

@@ -3,8 +3,9 @@ import { Token, pb } from "./main";
 import { decodeToken, encodeToken } from "./token";
 import type { Credential } from "./token/interface";
 import type { Admin, Record } from "pocketbase";
-import { authNotification } from "./auth/notif";
+import { authNotification, scopeErrorDialog } from "./auth/notif";
 import { NotificationStore } from "../notification/main";
+import { verifyScopes } from "./auth/scopes";
 
 export const AUTH_KEY = "bugrep-auth";
 export const UserModel = writable<Record | Admin>();
@@ -16,10 +17,20 @@ pb.authStore.onChange((v) => {
 });
 
 export async function Login(username: string, password: string) {
-  await pb.collection("users").authWithPassword(username, password);
+  try {
+    await pb.collection("users").authWithPassword(username, password);
+  } catch {
+    return false;
+  }
 
   const token = get(Token);
   const valid = !!token;
+
+  if (valid && !verifyScopes()) {
+    scopeErrorDialog();
+    Logout();
+    return true;
+  }
 
   if (valid) {
     localStorage.setItem(AUTH_KEY, encodeToken(username, password));

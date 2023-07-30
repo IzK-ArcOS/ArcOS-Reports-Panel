@@ -1,8 +1,10 @@
 :root {
   --fg: #ccc;
-  --win-bg: #222;
+  --bg: #222;
+  --win-bg: #353535;
   --win-border-rad: 7.5px;
-  --win-border: #434343 1px solid;
+  --bg-border: #434343 1px solid;
+  --win-border: rgb(107, 107, 107) 1px solid;
   --win-border-light: #5554 1px solid;
   --glass-bg: #202020a9;
   --glass-alt-bg: #414141a2;

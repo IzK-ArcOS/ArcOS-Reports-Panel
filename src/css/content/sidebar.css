@@ -1,7 +1,7 @@
 div.content div.sidebar {
   height: 100%;
   width: 250px;
-  border-right: var(--win-border);
+  border-right: var(--bg-border);
   padding: 0px;
   overflow-y: scroll;
 }
@@ -21,7 +21,7 @@ div.content div.sidebar div.notification h1 {
   margin: 0;
   display: flex;
   align-items: center;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 div.content div.sidebar div.notification h1 button.close {
