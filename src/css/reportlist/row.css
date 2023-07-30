@@ -11,6 +11,19 @@ div.reportlist div.row {
   border-radius: 5px;
 }
 
+div.reportlist div.row.solved:hover,
+div.reportlist div.row.closed:hover {
+  filter: brightness(125%);
+}
+
+div.reportlist div.row:not(.closed):not(.solved):hover {
+  background-color: var(--button-glass-bg);
+}
+
+div.reportlist div.row:active {
+  opacity: 0.5;
+}
+
 div.reportlist div.row.solved {
   background-color: var(--clr-green-bg);
   color: var(--clr-green-fg);

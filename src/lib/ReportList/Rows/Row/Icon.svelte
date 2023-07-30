@@ -17,5 +17,9 @@
 
 <Segment c="icon" nomask>
   <img src={url} alt={report.id} />
-  <img src={report.desktop ? desktopIcon : webIcon} alt={report.id} />
+  <img
+    src={report.desktop ? desktopIcon : webIcon}
+    alt={report.id}
+    title={report.desktop ? "Desktop" : "Web"}
+  />
 </Segment>
