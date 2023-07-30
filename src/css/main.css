@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Source+Code+Pro&display=swap"); /* Source Code Pro, Inter */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Round"); /* Material Icons Round */
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"); /* Material Icons Outlined */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Nunito+Sans:opsz@6..12&display=swap");
 @import url("./vars.css");
 @import url("./titlebar.css");
 @import url("./content.css");
 @import url("./scrollbars.css");
 @import url("./reportlist.css");
 @import url("./elements.css");
+@import url("./login.css");
+@import url("./mobileblock.css");
 
 *:not(.material-icons-round) {
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 *:not(.ol) {
@@ -19,13 +22,14 @@
 * {
   user-select: none;
   box-sizing: border-box;
+  transition: all 0.2s, color 0.08s;
 }
 
 body {
   background-color: var(--win-bg);
   margin: 0;
   color: var(--fg);
-  font-family: "Inter", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   position: fixed;
   top: 0;
   left: 0;
@@ -43,4 +47,13 @@ div.main {
   display: flex;
   flex-direction: column;
   height: inherit;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input:hover,
+textarea:hover {
+  cursor: text;
 }

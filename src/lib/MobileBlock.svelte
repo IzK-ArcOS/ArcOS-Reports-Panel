@@ -4,8 +4,10 @@
 
 <div class="mobileblock">
   <div class="inner">
-    <img src={logo} alt="" />
-    <h1>That doesn't work</h1>
+    <div class="imgwrapper">
+      <img src={logo} alt="" />
+    </div>
+    <h1>Screen too small</h1>
     <p>This page does not work on mobile devices!</p>
   </div>
 </div>

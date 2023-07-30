@@ -2,5 +2,39 @@ div.content div.sidebar {
   height: 100%;
   width: 250px;
   border-right: var(--win-border);
+  padding: 0px;
+  overflow-y: scroll;
+}
+
+div.content div.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+div.content div.sidebar div.notification {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
+  border-bottom: var(--button-bg) 1px solid;
+}
+
+div.content div.sidebar div.notification h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+div.content div.sidebar div.notification h1 button.close {
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  color: var(--fg);
+  font-size: 16px;
+}
+
+div.content div.sidebar div.notification p {
+  margin: 0;
+  margin-top: 5px;
 }

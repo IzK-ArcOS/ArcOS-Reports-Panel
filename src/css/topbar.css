@@ -1,1 +1,35 @@
-/**/
+div.titlebar div.controls div.status {
+  height: 25px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  background-color: var(--button-bg);
+  border-radius: 5px;
+  gap: 5px;
+  padding-left: 10px;
+}
+
+div.titlebar div.controls div.sep {
+  width: 1px;
+  height: 15px;
+  background-color: var(--button-hover-bg);
+}
+
+div.titlebar div.controls div.sep {
+  background-color: currentColor;
+  opacity: 0.2;
+}
+
+div.titlebar div.controls div.status:not(.good) {
+  background-color: var(--clr-red-bg);
+  color: var(--clr-red-fg);
+}
+
+div.titlebar div.controls div.status.good {
+  background-color: var(--clr-green-bg);
+  color: var(--clr-green-fg);
+}
+
+div.titlebar div.controls div.status span.material-icons-round {
+  font-size: 16px;
+}

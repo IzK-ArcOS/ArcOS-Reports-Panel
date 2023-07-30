@@ -1,3 +1,13 @@
+button {
+  width: fit-content;
+  padding: 5px 15px;
+  border-radius: 4px;
+  background-color: var(--button-glass-bg);
+  color: var(--fg);
+  border: none;
+  height: 26px;
+}
+
 button.link {
   text-decoration: underline;
   text-underline-offset: 2px;

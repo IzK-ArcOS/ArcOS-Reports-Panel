@@ -13,3 +13,13 @@ export function Notification(notif: Notif) {
 
   return id;
 }
+
+export function disposeNotification(id: string) {
+  const store = get(NotificationStore);
+
+  NotificationStore.set({});
+
+  delete store[id];
+
+  NotificationStore.set(store);
+}

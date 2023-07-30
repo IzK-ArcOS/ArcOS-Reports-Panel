@@ -1,4 +1,5 @@
 import { Notification } from "../notification/main";
+import { GitConnected } from "../ui";
 
 export async function tryGitHub() {
   const req = await (await fetch("https://api.github.com/")).json();
@@ -12,6 +13,8 @@ export async function tryGitHub() {
       message:
         "The GitHub API rate limit for this IP address has exceeded. Functionality will be limited.",
     });
+
+  GitConnected.set(!exceeded);
 
   return exceeded;
 }

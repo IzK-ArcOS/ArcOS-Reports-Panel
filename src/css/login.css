@@ -1,0 +1,32 @@
+div.login-wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.login-wrapper div.inner form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: end;
+}
+
+div.login-wrapper div.inner form input {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-glass-bg);
+  border: var(--button-bg) 1px solid;
+  color: var(--fg);
+  width: 250px;
+}
+
+div.login-wrapper div.inner img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  height: 100px;
+}

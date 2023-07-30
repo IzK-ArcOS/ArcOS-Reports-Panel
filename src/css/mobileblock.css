@@ -1,0 +1,52 @@
+div.mobileblock {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-red-bg);
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+div.mobileblock div.inner {
+  text-align: center;
+}
+
+div.mobileblock div.inner img {
+  height: 150px;
+  filter: grayscale(100%);
+}
+
+div.mobileblock div.inner div.imgwrapper {
+  position: relative;
+}
+
+div.mobileblock div.inner div.imgwrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-color: var(--clr-red-bg);
+  z-index: 200;
+}
+
+div.mobileblock div.inner h1 {
+  font-size: 24px;
+}
+
+div.mobileblock div.inner p {
+  margin: 0;
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1260px) {
+  div.mobileblock {
+    display: flex;
+  }
+}

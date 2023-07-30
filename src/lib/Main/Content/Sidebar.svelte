@@ -1,10 +1,10 @@
 <script>
   import { NotificationStore } from "../../../ts/notification/main";
+  import Notification from "./Sidebar/Notification.svelte";
 </script>
 
 <div class="sidebar">
   {#each Object.entries($NotificationStore) as notification}
-    <h1>{notification[1].title}</h1>
-    <p>{notification[1].message}</p>
+    <Notification data={notification[1]} id={notification[0]} />
   {/each}
 </div>

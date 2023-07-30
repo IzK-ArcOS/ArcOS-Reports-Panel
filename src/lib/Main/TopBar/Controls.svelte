@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Logout } from "../../../ts/pb/auth";
   import { Masked } from "../../../ts/ui";
 
   function toggleMask() {
@@ -11,7 +12,7 @@
   class:active={$Masked}
   on:click={toggleMask}>lock</button
 >
-<button class="material-icons-round">logout</button>
+<button class="material-icons-round" on:click={Logout}>logout</button>
 
 <style scoped>
   button {

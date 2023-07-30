@@ -1,15 +1,29 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { LoginFromStore } from "../ts/pb/auth";
+  import { Token } from "../ts/pb/main";
+  import Login from "./Login.svelte";
   import Content from "./Main/Content.svelte";
   import TopBar from "./Main/TopBar.svelte";
-  import { GetReports, Reports } from "../ts/reports/main";
+
+  let loading = false;
 
   onMount(async () => {
-    Reports.set(await GetReports());
+    loading = true;
+    await LoginFromStore();
+    loading = false;
   });
 </script>
 
 <div class="main">
   <TopBar />
-  <Content />
+  {#if !loading}
+    {#if $Token}
+      <Content />
+    {:else}
+      <Login />
+    {/if}
+  {:else}
+    Loading...
+  {/if}
 </div>

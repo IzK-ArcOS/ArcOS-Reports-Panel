@@ -32,7 +32,9 @@
   >
     {report.author || "None"}
   </Segment>
-  <Segment sad={noApi}>{api}</Segment>
+  <Segment sad={noApi || api == "localhost"} self={api == "arcdev.arcapi.nl"}>
+    {api}
+  </Segment>
   <Segment mleft nomask>{timestamp}</Segment>
   <Segment mono>{report.id}</Segment>
   <Actions {report} />

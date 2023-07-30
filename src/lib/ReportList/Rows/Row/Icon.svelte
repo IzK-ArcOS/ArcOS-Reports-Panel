@@ -3,6 +3,8 @@
   import { getIcon } from "../../../../ts/reports/icon";
   import type { ReportRecord } from "../../../../ts/reports/interface";
   import Segment from "./Segment.svelte";
+  import desktopIcon from "../../../../assets/desktop.svg";
+  import webIcon from "../../../../assets/web.svg";
 
   export let report: ReportRecord;
 
@@ -13,4 +15,7 @@
   });
 </script>
 
-<Segment c="icon" nomask><img src={url} alt={report.id} /></Segment>
+<Segment c="icon" nomask>
+  <img src={url} alt={report.id} />
+  <img src={report.desktop ? desktopIcon : webIcon} alt={report.id} />
+</Segment>
