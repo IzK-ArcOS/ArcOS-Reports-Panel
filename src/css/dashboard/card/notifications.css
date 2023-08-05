@@ -1,0 +1,16 @@
+div.card.notifications {
+  flex-grow: 1;
+  padding: 20px !important;
+}
+
+div.card.notifications div.notif-wrapper {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+div.card.notifications div.notif-wrapper p.none {
+  text-align: center;
+  opacity: 0.5;
+  font-style: italic;
+  margin: 5px;
+}

@@ -1,0 +1,19 @@
+div.card.statistics {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 20px 0;
+  padding: 20px !important;
+}
+
+div.card.statistics div.statistic h1.header {
+  font-size: 14px;
+  opacity: 0.5;
+  margin: 0;
+}
+
+div.card.statistics div.statistic p.content {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}

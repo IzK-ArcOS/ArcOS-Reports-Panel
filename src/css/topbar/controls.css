@@ -12,21 +12,26 @@ div.topbar div.controls div.status-wrapper {
 }
 
 div.topbar div.controls div.status {
+  display: block;
+  min-width: 30px;
   max-width: 30px;
   height: 30px;
   border-radius: 15px;
-  padding: 0 10px;
+  padding: 0 6px;
   display: flex;
   align-items: center;
   background-color: var(--button-bg);
+  transition: all 0.3s, max-width 0.5s;
   gap: 10px;
-  transition: all 0.5s;
+  overflow: hidden;
+  flex-direction: row-reverse;
 }
 
 div.topbar div.controls div.status:hover {
+  display: flex;
   width: fit-content;
-  max-width: 1000px;
-  border-radius: 10px;
+  max-width: 160px;
+  padding-left: 10px;
 }
 
 div.topbar div.controls div.sep {
@@ -38,8 +43,9 @@ div.topbar div.controls div.sep {
 
 div.topbar div.controls div.status div.sep {
   background-color: currentColor;
-  opacity: 0.2;
   margin: 0;
+  opacity: 0.2;
+  min-width: 1px;
 }
 
 div.topbar div.controls div.status:not(.good) {
@@ -50,6 +56,10 @@ div.topbar div.controls div.status:not(.good) {
 div.topbar div.controls div.status.good {
   background-color: var(--clr-green-bg);
   color: var(--clr-green-fg);
+}
+div.topbar div.controls div.status.meh {
+  background-color: var(--clr-orange-bg);
+  color: var(--clr-orange-fg);
 }
 
 div.topbar div.controls div.status span.material-icons-round {
@@ -73,6 +83,5 @@ div.topbar div.controls button.material-icons-round:hover {
 }
 
 div.topbar div.controls button.material-icons-round.active {
-  background-color: var(--button-active-bg) !important;
-  color: var(--clr-green-fg) !important;
+  color: var(--clr-blue-fg) !important;
 }

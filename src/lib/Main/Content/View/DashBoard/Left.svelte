@@ -4,6 +4,5 @@
 </script>
 
 <div class="left">
-  <Statistics/>
-  <LatestReports/>
+  <LatestReports />
 </div>

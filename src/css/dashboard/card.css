@@ -1,0 +1,42 @@
+@import url("./card/statistics.css");
+@import url("./card/notifications.css");
+
+div.dashboard div.card {
+  background-color: var(--button-active-bg);
+  width: 100%;
+  border-radius: var(--button-border-rad);
+  padding: 10px;
+  position: relative;
+  margin-top: 35px;
+  box-shadow: 0px 5px 15px 5px #0002;
+}
+
+div.dashboard div.card::before {
+  content: "banana";
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: -35px;
+  left: 0;
+  height: fit-content;
+  width: fit-content;
+  display: block;
+  color: var(--fg);
+  opacity: 1;
+}
+
+div.dashboard div.card.statistics::before {
+  content: "Statistics";
+}
+
+div.dashboard div.card.notifications::before {
+  content: "Notifications";
+}
+
+div.dashboard div.card.latest-reports::before {
+  content: "Latest Reports";
+}
+
+div.dashboard div.card.statistics::before {
+  content: "Statistics";
+}
