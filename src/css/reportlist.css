@@ -3,5 +3,7 @@
 div.reportlist {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0px;
+  height: 100%;
+  overflow-y: scroll;
 }

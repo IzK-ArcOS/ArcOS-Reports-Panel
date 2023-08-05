@@ -1,0 +1,4 @@
+div.dashboard div.card.latest-reports {
+  min-height: calc(100% - 150px);
+  flex-grow: 1;
+}

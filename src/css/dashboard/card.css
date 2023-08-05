@@ -1,10 +1,12 @@
 @import url("./card/statistics.css");
 @import url("./card/notifications.css");
+@import url("./card/reports.css");
+@import url("./card/status.css");
 
 div.dashboard div.card {
   background-color: var(--button-active-bg);
   width: 100%;
-  border-radius: var(--button-border-rad);
+  border-radius: 5px;
   padding: 10px;
   position: relative;
   margin-top: 35px;
@@ -34,9 +36,12 @@ div.dashboard div.card.notifications::before {
 }
 
 div.dashboard div.card.latest-reports::before {
-  content: "Latest Reports";
+  content: "Open Reports";
 }
 
 div.dashboard div.card.statistics::before {
   content: "Statistics";
+}
+div.dashboard div.card.status::before {
+  content: "Status";
 }

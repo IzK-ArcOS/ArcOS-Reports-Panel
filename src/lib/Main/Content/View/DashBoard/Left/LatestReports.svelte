@@ -1,1 +1,7 @@
-<div class="card latest-reports">Latest Reports</div>
+<script>
+  import ReportList from "../../../../../ReportList.svelte";
+</script>
+
+<div class="card latest-reports">
+  <ReportList opened />
+</div>

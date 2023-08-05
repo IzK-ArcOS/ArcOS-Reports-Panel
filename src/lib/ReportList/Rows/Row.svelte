@@ -23,13 +23,13 @@
 </script>
 
 <div class="row" class:solved={report.resolved} class:closed={report.closed}>
-  <Icon {report} />
+  <!-- <Icon {report} /> -->
+  <Segment mleft nomask>{timestamp}</Segment>
   <Segment grow nomask>{report.title}</Segment>
   <AuthorSegment {report} />
   <Segment sad={noApi || api == "localhost"} self={api == "arcdev.arcapi.nl"}>
     {api}
   </Segment>
-  <Segment mleft nomask>{timestamp}</Segment>
-  <Segment mono>{report.id}</Segment>
-  <Actions {report} />
+
+  <!-- <Segment mono>{report.id}</Segment> -->
 </div>

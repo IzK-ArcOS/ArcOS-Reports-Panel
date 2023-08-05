@@ -1,9 +1,10 @@
 <div class="row head">
-  <div class="segment icon" />
-  <div class="segment grow">Title</div>
-  <div class="segment">Author</div>
-  <div class="segment">Server</div>
-  <div class="segment mleft">Timestamp</div>
-  <div class="segment">Identifier</div>
-  <div class="segment small">Actions</div>
+  <!-- <div class="segment icon" /> -->
+  <div class="segment mleft">When?</div>
+  <div class="segment grow">What?</div>
+  <div class="segment">Who?</div>
+  <div class="segment">Where?</div>
+
+  <!-- <div class="segment">Identifier</div> -->
+  <!-- <div class="segment small">Actions</div> -->
 </div>

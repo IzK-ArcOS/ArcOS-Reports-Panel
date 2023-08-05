@@ -5,10 +5,12 @@ div.reportlist div.row {
   display: flex;
   width: 100%;
   gap: 5px;
-  height: 30px;
+  height: 50px !important;
+  min-height: 50px !important;
   align-items: center;
-  padding: 0 5px;
-  border-radius: 5px;
+  padding: 0 10px;
+  border-radius: 0;
+  border-bottom: var(--button-glass-bg) 1px solid;
 }
 
 div.reportlist div.row.solved:hover,
@@ -25,12 +27,9 @@ div.reportlist div.row:active {
 }
 
 div.reportlist div.row.solved {
-  background-color: var(--clr-green-bg);
   color: var(--clr-green-fg);
 }
 
 div.reportlist div.row.closed:not(.solved) {
-  font-style: italic;
-  background-color: var(--clr-red-bg);
-  color: var(--clr-red-fg);
+  color: var(--clr-orange-fg);
 }
