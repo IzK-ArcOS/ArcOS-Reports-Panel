@@ -1,0 +1,78 @@
+div.topbar div.controls {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+div.topbar div.controls div.status-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+div.topbar div.controls div.status {
+  max-width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: var(--button-bg);
+  gap: 10px;
+  transition: all 0.5s;
+}
+
+div.topbar div.controls div.status:hover {
+  width: fit-content;
+  max-width: 1000px;
+  border-radius: 10px;
+}
+
+div.topbar div.controls div.sep {
+  width: 1px;
+  height: 20px;
+  background-color: var(--button-hover-bg);
+  margin: 0 10px;
+}
+
+div.topbar div.controls div.status div.sep {
+  background-color: currentColor;
+  opacity: 0.2;
+  margin: 0;
+}
+
+div.topbar div.controls div.status:not(.good) {
+  background-color: var(--clr-red-bg);
+  color: var(--clr-red-fg);
+}
+
+div.topbar div.controls div.status.good {
+  background-color: var(--clr-green-bg);
+  color: var(--clr-green-fg);
+}
+
+div.topbar div.controls div.status span.material-icons-round {
+  font-size: 18px;
+}
+
+div.topbar div.controls button.material-icons-round {
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: var(--fg);
+}
+
+div.topbar div.controls button.material-icons-round:hover {
+  background-color: var(--button-active-bg);
+}
+
+div.topbar div.controls button.material-icons-round.active {
+  background-color: var(--button-active-bg) !important;
+  color: var(--clr-green-fg) !important;
+}

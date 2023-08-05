@@ -1,4 +1,4 @@
-div.titlebar div.centeredtitle {
+div.topbar div.centeredtitle {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -11,23 +11,23 @@ div.titlebar div.centeredtitle {
   padding: 6px 5px;
 }
 
-div.titlebar.centered div.centeredtitle {
+div.topbar.centered div.centeredtitle {
   opacity: 1;
   visibility: visible;
 }
 
-div.titlebar.centered p.title span {
+div.topbar.centered p.title span {
   color: transparent;
   visibility: hidden;
   max-width: 0;
   overflow: hidden;
 }
 
-div.titlebar.centered p.title img.icon {
+div.topbar.centered p.title img.icon {
   margin-right: 0;
 }
 
-div.bigtitlebars div.titlebar.centered div.centeredtitle {
+div.bigtopbars div.topbar.centered div.centeredtitle {
   height: 17px;
   margin: 5px 0;
 }

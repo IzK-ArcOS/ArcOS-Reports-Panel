@@ -9,19 +9,21 @@
   import PbStatus from "./TopBar/PbStatus.svelte";
 </script>
 
-<div class="titlebar big">
+<div class="topbar big">
   <p class="title">
-    <img src={logo} alt="" class="icon" />
-    <span
-      >ArcOS Reports Panel{$UserModel ? ` - ${$UserModel.username}` : ""}</span
-    >
+    <!-- <img src={logo} alt="" class="icon" /> -->
+    <span>ArcReports</span>
   </p>
   <div class="controls">
-    <GitStatus />
-    <PbStatus />
-    <MaskStatus />
-    <div class="sep" />
+    <div class="status-wrapper">
+      <GitStatus />
+      <PbStatus />
+      {#if $Token}
+        <MaskStatus />
+      {/if}
+    </div>
     {#if $Token}
+      <div class="sep" />
       <Controls />
     {/if}
   </div>

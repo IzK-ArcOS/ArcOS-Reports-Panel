@@ -1,5 +1,5 @@
-<script lang="ts">
-  import ReportList from "../../ReportList.svelte";
+<script>
+  import DashBoard from "./View/DashBoard.svelte";
 </script>
 
-<div class="view"><ReportList /></div>
+<div class="view"><DashBoard /></div>

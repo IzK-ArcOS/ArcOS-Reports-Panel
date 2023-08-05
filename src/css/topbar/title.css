@@ -1,6 +1,6 @@
 @import url("./title/centered.css");
 
-div.titlebar p.title {
+div.topbar p.title {
   margin: 0;
   border-radius: 5px;
   padding: 1px 5px;
@@ -9,21 +9,24 @@ div.titlebar p.title {
   white-space: nowrap;
   text-overflow: ellipsis;
   display: flex;
+  font-size: 20px;
 }
 
-div.titlebar p.title * {
+div.topbar p.title * {
   vertical-align: middle;
   line-height: 18px;
-  font-size: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
 }
 
-div.titlebar p.title img.icon {
+div.topbar p.title img.icon {
   height: 14px;
   margin: 2px 0;
   margin-right: 5px;
 }
 
-div.titlebar.big img.icon {
+div.topbar.big img.icon {
   height: 16px !important;
   margin: 0 !important;
   margin-right: 5px !important;
