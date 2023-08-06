@@ -3,9 +3,10 @@
   import Rows from "./ReportList/Rows.svelte";
 
   export let opened = false;
+  export let minimal = false;
 </script>
 
 <div class="reportlist">
-  <HeaderRow />
-  <Rows {opened} />
+  <HeaderRow {minimal} />
+  <Rows {opened} {minimal} />
 </div>

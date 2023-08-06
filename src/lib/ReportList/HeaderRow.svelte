@@ -1,10 +1,18 @@
+<script lang="ts">
+  export let minimal: boolean;
+</script>
+
 <div class="row head">
-  <!-- <div class="segment icon" /> -->
+  {#if !minimal}
+    <div class="segment icon" />
+  {/if}
   <div class="segment mleft">When?</div>
   <div class="segment grow">What?</div>
-  <div class="segment">Who?</div>
-  <div class="segment">Where?</div>
+  <div class="segment mobile-hide">Who?</div>
+  <div class="segment mobile-hide">Where?</div>
 
-  <!-- <div class="segment">Identifier</div> -->
+  {#if !minimal}
+    <div class="segment mobile-hide">Identifier</div>
+  {/if}
   <!-- <div class="segment small">Actions</div> -->
 </div>

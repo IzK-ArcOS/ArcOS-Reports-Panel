@@ -3,5 +3,5 @@
 </script>
 
 <div class="card latest-reports">
-  <ReportList opened />
+  <ReportList opened minimal />
 </div>

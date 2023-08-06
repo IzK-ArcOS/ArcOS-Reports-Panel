@@ -39,9 +39,16 @@ div.reportlist div.row div.segment.mono {
 
 div.reportlist div.row div.segment.icon {
   --w: 48px;
-  gap: 5px;
+  gap: 10px;
+  margin-right: 10px;
 }
 
 div.reportlist div.row div.segment.icon img {
   height: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  div.reportlist div.row div.segment:not(.small) {
+    min-width: 100px;
+  }
 }

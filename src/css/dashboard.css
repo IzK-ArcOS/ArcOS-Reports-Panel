@@ -22,3 +22,15 @@ div.dashboard > div.right {
 div.dashboard > div.left {
   width: calc(100% - 530px);
 }
+
+@media screen and (max-width: 1000px) {
+  div.dashboard {
+    flex-direction: column;
+  }
+
+  div.dashboard > div.left,
+  div.dashboard > div.right {
+    width: 100%;
+    padding: 5px;
+  }
+}

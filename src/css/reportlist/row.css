@@ -10,6 +10,9 @@ div.reportlist div.row {
   align-items: center;
   padding: 0 10px;
   border-radius: 0;
+}
+
+div.reportlist div.row:not(:last-child) {
   border-bottom: var(--button-glass-bg) 1px solid;
 }
 
@@ -18,7 +21,7 @@ div.reportlist div.row.closed:hover {
   filter: brightness(125%);
 }
 
-div.reportlist div.row:not(.closed):not(.solved):hover {
+div.reportlist div.row:hover {
   background-color: var(--button-glass-bg);
 }
 

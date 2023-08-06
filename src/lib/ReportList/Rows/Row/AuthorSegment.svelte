@@ -15,6 +15,7 @@
 <Segment
   sad={noAuthor}
   self={report.author && $UserModel.authorname == report.author}
+  c="mobile-hide"
 >
   {report.author || "None"}
 </Segment>

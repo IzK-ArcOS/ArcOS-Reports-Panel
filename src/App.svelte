@@ -17,5 +17,5 @@
 </svelte:head>
 
 <Main />
-<MobileBlock />
-<DialogRenderer />
+<!-- <MobileBlock />
+ --><DialogRenderer />

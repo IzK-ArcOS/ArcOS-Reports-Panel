@@ -4,6 +4,7 @@
   import Row from "./Rows/Row.svelte";
 
   export let opened: boolean;
+  export let minimal: boolean;
 
   let reports: ReportRecord[] = [];
 
@@ -16,6 +17,6 @@
 
 {#if reports}
   {#each reports as report}
-    <Row {report} />
+    <Row {report} {minimal} />
   {/each}
 {/if}
