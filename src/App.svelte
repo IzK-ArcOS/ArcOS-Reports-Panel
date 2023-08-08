@@ -4,10 +4,11 @@
   import "./css/main.css";
   import DialogRenderer from "./lib/DialogRenderer.svelte";
   import Main from "./lib/Main.svelte";
-  import MobileBlock from "./lib/MobileBlock.svelte";
   import { tryGitHub } from "./ts/github/main";
+  import { getUptimes } from "./ts/uptime/main";
 
   onMount(async () => {
+    console.log(await getUptimes());
     await tryGitHub();
   });
 </script>

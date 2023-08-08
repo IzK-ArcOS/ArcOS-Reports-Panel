@@ -19,3 +19,21 @@ div.card.notifications div.notif-wrapper div.notification {
   display: flex;
   flex-direction: column;
 }
+
+div.card.notifications div.notif-wrapper div.notification h1 {
+  margin: 0;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+}
+
+div.card.notifications div.notif-wrapper div.notification h1 span {
+  margin-right: auto;
+}
+
+div.card.notifications div.notif-wrapper div.notification h1 button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  min-width: unset;
+}
