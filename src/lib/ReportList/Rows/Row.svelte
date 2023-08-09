@@ -1,18 +1,17 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import type { ReportRecord } from "../../../ts/reports/interface";
   import dayjs from "dayjs";
-  import { UserModel } from "../../../ts/pb/auth";
-  import Segment from "./Row/Segment.svelte";
-  import Actions from "./Row/Actions.svelte";
-  import Icon from "./Row/Icon.svelte";
-  import AuthorSegment from "./Row/AuthorSegment.svelte";
+  import { onMount } from "svelte";
   import { Dialog } from "../../../ts/dialog/main";
   import { pb } from "../../../ts/pb/main";
+  import type { ReportRecord } from "../../../ts/reports/interface";
+  import AuthorSegment from "./Row/AuthorSegment.svelte";
+  import Icon from "./Row/Icon.svelte";
+  import Segment from "./Row/Segment.svelte";
 
   export let report: ReportRecord;
   export let minimal: boolean;
 
+  let isSvelteWindow = false;
   let timestamp = "";
   let api = "";
   let noApi = false;
@@ -22,6 +21,7 @@
 
     noApi = !report.api || report.api == "<api>";
     api = report.api && report.api != "<api>" ? report.api : "None";
+    isSvelteWindow = report.title.toLowerCase().startsWith("svelte:window");
 
     if (report.resolved && !report.closed) {
       Dialog({
@@ -46,7 +46,8 @@
     <Icon {report} />
   {/if}
   <Segment mleft nomask>{timestamp}</Segment>
-  <Segment grow nomask>{report.title}</Segment>
+  <Segment grow nomask>{isSvelteWindow ? "Crash Report" : report.title}</Segment
+  >
   <AuthorSegment {report} />
   <Segment
     c="mobile-hide"
