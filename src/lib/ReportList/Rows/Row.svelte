@@ -23,6 +23,8 @@
     api = report.api && report.api != "<api>" ? report.api : "None";
     isSvelteWindow = report.title.toLowerCase().startsWith("svelte:window");
 
+    api = api == "arcdev.arcapi.nl" ? "ArcDev" : api;
+
     if (report.resolved && !report.closed) {
       Dialog({
         title: "Something is wrong",
@@ -46,15 +48,16 @@
     <Icon {report} />
   {/if}
   <Segment mleft nomask>{timestamp}</Segment>
-  <Segment grow nomask>{isSvelteWindow ? "Crash Report" : report.title}</Segment
-  >
+  <Segment grow nomask>
+    {isSvelteWindow ? "Crash Report" : report.title}
+  </Segment>
   <AuthorSegment {report} />
   <Segment
     c="mobile-hide"
     sad={noApi || api == "localhost"}
     self={api == "arcdev.arcapi.nl"}
   >
-    {api == "arcdev.arcapi.nl" ? "ArcDev" : api}
+    {api}
   </Segment>
   {#if !minimal}
     <Segment mono>{report.id}</Segment>

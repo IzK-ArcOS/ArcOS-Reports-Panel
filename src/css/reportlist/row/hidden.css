@@ -1,19 +1,11 @@
-div.reportlist div.row div.segment div.hidden {
-  width: fit-content;
+div.reportview div.row div.segment div.hidden {
+  width: 30px;
   height: 30px;
+  line-height: 30px;
   color: var(--clr-yellow-fg);
-  background-color: var(--clr-yellow-bg) !important;
-  border-radius: 5px;
-  padding: 0 10px;
-  display: flex;
-  align-items: center;
+  background-color: var(--button-glass-bg) !important;
+  border-radius: 15px;
+  text-align: center;
   gap: 10px;
-}
-
-div.reportlist div.row div.segment div.hidden span.material-icons-round {
-  font-size: 16px;
-}
-
-div.reportlist div.row div.segment div.hidden span:not(.material-icons-round) {
-  display: none;
+  font-size: 18px;
 }

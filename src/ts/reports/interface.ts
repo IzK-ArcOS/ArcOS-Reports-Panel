@@ -20,6 +20,8 @@ export interface Report {
   metaenv: MetaEnv;
 }
 
+export type ReportGroups = { [key: string]: ReportRecord[] };
+
 export type ReportRecord = Report & Record;
 
 export type Mode =

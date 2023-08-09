@@ -1,6 +1,6 @@
 @import url("./segment/actions.css");
 
-div.reportlist div.row div.segment {
+div.reportview div.row div.segment {
   --w: 15%;
   width: var(--w);
   max-width: var(--w);
@@ -12,43 +12,43 @@ div.reportlist div.row div.segment {
   align-items: center;
 }
 
-div.reportlist div.row div.segment.mleft {
+div.reportview div.row div.segment.mleft {
   margin-left: auto;
 }
 
-div.reportlist div.row div.segment.small {
+div.reportview div.row div.segment.small {
   --w: 7.5%;
 }
 
-div.reportlist div.row div.segment.grow {
+div.reportview div.row div.segment.grow {
   flex-grow: 1;
   --w: unset;
 }
 
-div.reportlist div.row div.segment.sad {
+div.reportview div.row div.segment.sad {
   opacity: 0.4;
 }
 
-div.reportlist div.row div.segment.self {
+div.reportview div.row div.segment.self {
   color: var(--clr-aqua-fg);
 }
 
-div.reportlist div.row div.segment.mono {
+div.reportview div.row div.segment.mono {
   font-family: "Source Code Pro", monospace;
 }
 
-div.reportlist div.row div.segment.icon {
+div.reportview div.row div.segment.icon {
   --w: 48px;
   gap: 10px;
   margin-right: 10px;
 }
 
-div.reportlist div.row div.segment.icon img {
+div.reportview div.row div.segment.icon img {
   height: 20px;
 }
 
 @media screen and (max-width: 1000px) {
-  div.reportlist div.row div.segment:not(.small) {
+  div.reportview div.row div.segment:not(.small) {
     min-width: 100px;
   }
 }

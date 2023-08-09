@@ -1,7 +1,7 @@
 @import url("./row/header.css");
 @import url("./row/segment.css");
 @import url("./row/hidden.css");
-div.reportlist div.row {
+div.reportview div.row {
   display: flex;
   width: 100%;
   gap: 5px;
@@ -12,27 +12,27 @@ div.reportlist div.row {
   border-radius: 0;
 }
 
-div.reportlist div.row:not(:last-child) {
+div.reportview div.row:not(:last-child) {
   border-bottom: var(--button-glass-bg) 1px solid;
 }
 
-div.reportlist div.row.solved:hover,
-div.reportlist div.row.closed:hover {
+div.reportview div.row.solved:hover,
+div.reportview div.row.closed:hover {
   filter: brightness(125%);
 }
 
-div.reportlist div.row:hover {
+div.reportview div.row:hover {
   background-color: var(--button-glass-bg);
 }
 
-div.reportlist div.row:active {
+div.reportview div.row:active {
   opacity: 0.5;
 }
 
-div.reportlist div.row.solved {
+div.reportview div.row.solved {
   color: var(--clr-green-fg);
 }
 
-div.reportlist div.row.closed:not(.solved) {
+div.reportview div.row.closed:not(.solved) {
   color: var(--clr-orange-fg);
 }

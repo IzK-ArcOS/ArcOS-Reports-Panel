@@ -1,6 +1,7 @@
 div.card.notifications {
   flex-grow: 1;
   padding: 20px !important;
+  padding-right: 13px !important	;
 }
 
 div.card.notifications div.notif-wrapper {
@@ -36,4 +37,9 @@ div.card.notifications div.notif-wrapper div.notification h1 button {
   padding: 0;
   background-color: transparent;
   min-width: unset;
+  font-size: 20px;
+}
+
+div.card.notifications div.notif-wrapper div.notification p {
+  margin: 5px 0;
 }

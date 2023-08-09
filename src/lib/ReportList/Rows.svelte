@@ -5,13 +5,14 @@
 
   export let opened: boolean;
   export let minimal: boolean;
+  export let data: ReportRecord[] = [];
 
   let reports: ReportRecord[] = [];
 
   Reports.subscribe((v) => {
     if (!v) return;
 
-    reports = opened ? v.filter((r) => !r.closed) : v;
+    reports = data.length ? data : opened ? v.filter((r) => !r.closed) : v;
   });
 </script>
 

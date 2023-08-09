@@ -3,7 +3,7 @@ import { Notification } from "../../notification/main";
 
 export function authNotification(username: string) {
   Notification({
-    title: "Hi!",
+    title: "Mandatory login thingy",
     message: `Glad you made it, ${username}! Please don't abuse this panel, that'd make the team sad...`,
   });
 }

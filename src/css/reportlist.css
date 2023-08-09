@@ -1,6 +1,6 @@
 @import url("./reportlist/row.css");
 
-div.reportlist {
+div.reportview.list {
   display: flex;
   flex-direction: column;
   gap: 0px;

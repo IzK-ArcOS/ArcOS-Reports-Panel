@@ -8,6 +8,7 @@ div.dashboard {
 
 div.dashboard > div {
   padding: 15px;
+  padding-right: 7px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;

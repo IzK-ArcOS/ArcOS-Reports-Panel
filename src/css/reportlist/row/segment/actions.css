@@ -1,7 +1,7 @@
-div.reportlist div.row div.segment.act {
+div.reportview.list div.row div.segment.act {
   gap: 10px;
 }
-div.reportlist div.row div.segment.act button.material-icons-round {
+div.reportview.list div.row div.segment.act button.material-icons-round {
   margin: 0;
   padding: 0;
   border: none;
@@ -11,10 +11,13 @@ div.reportlist div.row div.segment.act button.material-icons-round {
   font-size: 18px;
 }
 
-div.reportlist div.row div.segment.act button.material-icons-round.resolved {
+div.reportview.list
+  div.row
+  div.segment.act
+  button.material-icons-round.resolved {
   color: var(--clr-green-fg);
 }
 
-div.reportlist div.row div.segment.act button.material-icons-round.closed {
+div.reportview.list div.row div.segment.act button.material-icons-round.closed {
   color: var(--clr-red-fg);
 }
