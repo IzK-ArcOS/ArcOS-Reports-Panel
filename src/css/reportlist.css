@@ -1,9 +1,13 @@
 @import url("./reportlist/row.css");
 
 div.reportview.list {
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   gap: 0px;
-  height: 100%;
+  flex-grow: 1;
   overflow-y: scroll;
+}
+
+div.card.latest-reports:not(.groupView) div.reportview {
+  height: 100%;
 }

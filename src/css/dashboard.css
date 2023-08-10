@@ -17,11 +17,11 @@ div.dashboard > div {
 }
 
 div.dashboard > div.right {
-  width: 530px;
+  width: 400px;
 }
 
 div.dashboard > div.left {
-  width: calc(100% - 530px);
+  width: calc(100% - 400px);
 }
 
 @media screen and (max-width: 1000px) {

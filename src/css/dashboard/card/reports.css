@@ -1,7 +1,24 @@
 div.dashboard div.card.latest-reports {
-  padding-right: 3px !important;
   min-height: calc(100% - 210px);
   flex-grow: 1;
+}
+
+div.dashboard div.card.latest-reports:not(.groupView) {
+  padding-right: 3px !important;
+}
+
+div.dashboard div.card.latest-reports.groupView {
+  padding: 0 !important;
+}
+
+div.dashboard div.card.latest-reports button.mode {
+  position: absolute;
+  top: -35px;
+  right: 5px;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  font-size: 20px;
 }
 
 @media screen and (max-width: 800px) {

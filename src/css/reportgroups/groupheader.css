@@ -1,0 +1,53 @@
+div.reportview.groups div.groupheader {
+  display: flex;
+  align-items: center;
+  background-color: var(--button-glass-bg);
+  width: 100%;
+  gap: 10px;
+  padding: 0;
+  height: 40px;
+  border-radius: 5px;
+}
+
+div.reportview.groups div.groupheader button.back {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  font-size: 20px;
+  border-right: var(--button-glass-hover-bg) 1px solid;
+  border-radius: 0;
+}
+
+div.reportview.groups div.groupheader div.path {
+  display: flex;
+  gap: 30px;
+  margin-left: 10px;
+}
+
+div.reportview.groups div.groupheader div.path span.material-icons-round {
+  font-size: 18px;
+  margin-right: -20px;
+}
+
+div.reportview.groups div.groupheader div.path div.segment {
+  position: relative;
+}
+
+div.reportview.groups
+  div.groupheader
+  div.path
+  div.segment:not(:last-child)::after {
+  content: "chevron_right";
+  font-family: "Material Icons Round";
+  font-size: 20px;
+  position: absolute;
+  right: -25px;
+  opacity: 0.4;
+}
+
+div.reportview.groups div.groupheader div.count {
+  font-family: "Source Code Pro", monospace;
+  margin-left: auto;
+  padding-right: 15px;
+}
