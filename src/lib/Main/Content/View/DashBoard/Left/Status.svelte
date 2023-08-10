@@ -1,7 +1,4 @@
 <script lang="ts">
-  import { UserModel } from "../../../../../../ts/pb/auth";
-  import { Token } from "../../../../../../ts/pb/main";
-
   import { GitConnected, Masked } from "../../../../../../ts/ui";
   import {
     UptimeState,
