@@ -21,17 +21,13 @@
 </script>
 
 <div class="card status">
-  <div class="status" class:error={!$GitConnected} class:good={$GitConnected}>
-    GitHub
-  </div>
-  <div class="status" class:error={!$Token} class:good={$Token}>
+  <!-- <div class="status" class:error={!$Token} class:good={$Token}>
     {#if $UserModel}
       {$UserModel.username}
     {:else}
       Authentication
     {/if}
-  </div>
-  <div class="status" class:warn={!$Masked} class:good={$Masked}>Locked</div>
+  </div> -->
   {#each Object.entries(uptimes) as uptime}
     <div
       class="status"
@@ -43,4 +39,8 @@
       {UPTIME_CAPTIONS[uptime[0]]}
     </div>
   {/each}
+  <div class="status" class:error={!$GitConnected} class:good={$GitConnected}>
+    GitHub
+  </div>
+  <div class="status" class:warn={!$Masked} class:good={$Masked}>Locked</div>
 </div>
