@@ -5,10 +5,8 @@
   import DialogRenderer from "./lib/DialogRenderer.svelte";
   import Main from "./lib/Main.svelte";
   import { tryGitHub } from "./ts/github/main";
-  import { getUptimes } from "./ts/uptime/main";
 
   onMount(async () => {
-    console.log(await getUptimes());
     await tryGitHub();
   });
 </script>

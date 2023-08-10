@@ -12,7 +12,9 @@
   Reports.subscribe((v) => {
     if (!v) return;
 
-    reports = data.length ? data : opened ? v.filter((r) => !r.closed) : v;
+    reports = (data.length ? data : v).filter((r) =>
+      opened ? !r.closed : true
+    );
   });
 </script>
 

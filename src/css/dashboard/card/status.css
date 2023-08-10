@@ -1,9 +1,11 @@
 div.card.status {
-  display: flex;
-  height: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  min-height: 100px;
+  height: 100px !important;
   padding: 20px 25px !important;
   align-items: center;
-  gap: 40px;
+  gap: 20px 0;
 }
 
 div.card.status div.status {
@@ -32,4 +34,12 @@ div.card.status div.status.error::before {
 
 div.card.status div.status.warn::before {
   background-color: var(--clr-orange-fg);
+}
+
+@media screen and (max-width: 800px) {
+  div.card.status {
+    grid-template-columns: repeat(2, auto);
+    min-height: 180px;
+    max-height: unset !important;
+  }
 }

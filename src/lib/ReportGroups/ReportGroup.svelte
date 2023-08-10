@@ -4,17 +4,19 @@
 
   export let reports: ReportRecord[];
   export let caption: string;
-
-  let expanded = false;
+  export let expanded: string;
+  export let opened = false;
 
   function expand() {
-    expanded = !expanded;
+    expanded = expanded == caption ? "" : caption;
   }
 </script>
 
 {#if reports && reports.length && caption}
-  <div class="reportgroup" class:expanded>
-    <button class="expander" on:click={expand}>{caption}</button>
-    <ReportList nohead minimal data={reports} />
+  <div class="reportgroup" class:expanded={expanded == caption}>
+    <button class="expander" on:click={expand}>
+      <span>{caption} ({reports.length})</span>
+    </button>
+    <ReportList nohead minimal data={reports} {opened} />
   </div>
 {/if}

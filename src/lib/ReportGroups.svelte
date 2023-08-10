@@ -6,7 +6,9 @@
   import HeaderRow from "./ReportList/HeaderRow.svelte";
 
   export let data: ReportRecord[] = [];
+  export let opened = false;
 
+  let expanded = "";
   let groups: ReportGroups = {};
 
   Reports.subscribe((v) => {
@@ -20,7 +22,12 @@
   <HeaderRow minimal />
   {#if groups}
     {#each Object.entries(groups) as entry}
-      <ReportGroup reports={entry[1]} caption={entry[0]} />
+      <ReportGroup
+        reports={entry[1]}
+        caption={entry[0]}
+        bind:expanded
+        {opened}
+      />
     {/each}
   {/if}
 </div>

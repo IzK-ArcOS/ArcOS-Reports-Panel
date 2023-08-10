@@ -13,5 +13,5 @@
 
 <div class="card latest-reports">
   <!-- <reportview list opened minimal /> -->
-  <ReportGroups />
+  <ReportGroups opened />
 </div>

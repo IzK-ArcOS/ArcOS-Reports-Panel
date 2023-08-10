@@ -1,5 +1,4 @@
 div.reportview.groups {
-  display: flex;
   flex-direction: column;
   gap: 0px;
   height: 100%;
@@ -7,28 +6,56 @@ div.reportview.groups {
 }
 
 div.reportview.groups div.reportgroup {
-  height: 50px;
+  height: 40px;
   overflow: hidden;
+  margin-bottom: 10px;
+}
+
+div.reportview.groups div.row.head {
+  border-bottom: none;
+  margin-bottom: 5px;
 }
 
 div.reportview.groups div.reportgroup.expanded {
   height: fit-content;
 }
 
+div.reportview.groups div.reportgroup.expanded button.expander {
+  border-bottom: var(--button-glass-bg) 1px solid;
+}
+
 div.reportview.groups div.reportgroup button.expander {
-  height: 50px;
+  height: 40px;
   width: 100%;
   text-align: left;
-  background-color: transparent;
-  border-bottom: var(--button-glass-bg) 1px solid;
+  background-color: var(--win-bg);
+  border-bottom: transparent 1px solid;
   border-radius: 0;
   display: flex;
   align-items: center;
+  font-weight: bold;
+  border-radius: 5px;
 }
 
+div.reportview.groups div.reportgroup button.expander:active {
+  scale: unset !important;
+}
 div.reportview.groups div.reportgroup button.expander::after {
   content: "chevron_right";
   font-family: "Material Icons Round";
   margin-left: auto;
-  opacity: 0.5;
+  opacity: 0.7;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+div.reportview.groups div.reportgroup.expanded button.expander::after {
+  transform: rotate(90deg);
+}
+
+div.reportview.groups div.reportgroup button.expander span {
+  width: calc(100% - 20px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

@@ -1,4 +1,12 @@
 div.dashboard div.card.latest-reports {
-  min-height: calc(100% - 150px);
+  padding-right: 3px !important;
+  min-height: calc(100% - 210px);
   flex-grow: 1;
+}
+
+@media screen and (max-width: 800px) {
+  div.dashboard div.card.latest-reports {
+    min-height: unset !important;
+    flex-grow: 0;
+  }
 }
