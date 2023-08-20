@@ -6,7 +6,7 @@
 div.dashboard div.card {
   background-color: var(--button-active-bg);
   width: 100%;
-  border-radius: 5px;
+  border-radius: 10px;
   padding: 10px;
   position: relative;
   margin-top: 35px;
@@ -15,11 +15,13 @@ div.dashboard div.card {
 
 div.dashboard div.card::before {
   content: "banana";
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   position: absolute;
-  top: -35px;
-  left: 0;
+  top: -30px;
+  left: 10px;
+  font-family: "Source Code Pro", monospace;
+  text-transform: uppercase;
   height: fit-content;
   width: fit-content;
   display: block;

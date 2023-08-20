@@ -6,4 +6,5 @@ export const UPTIME_CAPTIONS = {
   "2": "ArcDev",
   "3": "Enderman's Lair",
   "6": "Linfosys",
+  "7": "Beta Testers",
 };

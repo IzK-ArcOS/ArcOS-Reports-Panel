@@ -7,5 +7,5 @@ export async function deleteReport(id: string): Promise<boolean> {
     message: `Report ${id} is being permanently deleted from the Reports server.`,
   });
 
-  return await pb.collection("bugrep").delete(id);
+  return await pb.collection("bugrep").delete(id, { br: "true" });
 }
