@@ -14,7 +14,7 @@
           caption: "Mark Down",
           action() {
             navigator.clipboard.writeText(
-              `[\`${data.id}\`](https://bugrep.arcapi.nl/?rid=${data.id})`
+              `[\`${data.id}\`](<https://bugrep.arcapi.nl/?rid=${data.id}>)`
             );
           },
         },

@@ -24,7 +24,7 @@
 
     data = (await GetReports()).filter((a) => a.id == $ViewerId)[0];
 
-    if (!data)
+    if (!data && $ViewerId && $ViewerId != null)
       Dialog({
         title: "What is that?",
         message: `It doesn't appear report ${$ViewerId} is anywhere on the server... Please check the ID and try again.`,
