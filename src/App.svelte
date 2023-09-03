@@ -8,6 +8,10 @@
 
   onMount(async () => {
     await tryGitHub();
+
+    const ls = localStorage.getItem("br-zoomout");
+
+    (document.body.style as any).zoom = ls ? "80%" : "";
   });
 </script>
 

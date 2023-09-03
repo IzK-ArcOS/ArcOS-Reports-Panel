@@ -18,8 +18,21 @@
       ],
     });
   }
+
+  function zoomOut() {
+    const ls = localStorage.getItem("br-zoomout");
+
+    (document.body.style as any).zoom = ls ? "" : "80%";
+
+    if (ls) {
+      localStorage.removeItem("br-zoomout");
+    } else {
+      localStorage.setItem("br-zoomout", "true");
+    }
+  }
 </script>
 
+<button class="material-icons-round" on:click={zoomOut}> zoom_out </button>
 <button
   class="material-icons-round"
   class:active={$Masked}
