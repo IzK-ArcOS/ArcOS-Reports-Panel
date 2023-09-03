@@ -32,9 +32,9 @@
   <GroupHeader bind:viewing reports={filtered.length} />
   {#if !$viewing}
     {#each Object.entries(groups) as entry}
-      <ReportGroup caption={entry[0]} bind:viewing />
+      <ReportGroup caption={entry[0]} bind:viewing count={entry[1].length} />
     {/each}
   {:else}
-    <ReportList data={filtered} opened minimal />
+    <ReportList data={filtered} minimal />
   {/if}
 </div>

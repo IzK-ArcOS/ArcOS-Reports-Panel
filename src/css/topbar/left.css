@@ -1,5 +1,6 @@
 window.lefttb div.topbar p.title {
   margin-left: auto;
+  line-height: 20px;
 }
 
 window.lefttb div.topbar div.controls {

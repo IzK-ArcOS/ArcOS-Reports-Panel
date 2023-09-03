@@ -1,0 +1,9 @@
+div.viewer-body {
+  height: calc(100% - 216px);
+}
+
+@media screen and (max-width: 1300px) {
+  div.viewer-body {
+    height: 200px;
+  }
+}

@@ -3,6 +3,7 @@
 
   export let caption: string;
   export let viewing: Writable<string>;
+  export let count: number;
 
   function navigate() {
     $viewing = caption;
@@ -15,5 +16,6 @@
     <span>
       {caption}
     </span>
+    <div class="count">{count}</div>
   </button>
 {/if}

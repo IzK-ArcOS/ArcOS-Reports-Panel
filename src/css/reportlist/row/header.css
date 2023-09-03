@@ -1,3 +1,6 @@
 div.reportview div.row.head {
   font-weight: bold;
+  border-bottom: var(--bg-border) !important;
+  height: 40px !important;
+  background-color: var(--bg);
 }

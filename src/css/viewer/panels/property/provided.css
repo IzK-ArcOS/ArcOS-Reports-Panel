@@ -1,0 +1,17 @@
+div.viewer div.panels div.leftpanel div.property.provided .value {
+  display: flex;
+  gap: 20px;
+}
+
+div.viewer div.panels div.leftpanel div.property.provided .value .item.bad {
+  opacity: 0.2;
+}
+
+div.viewer
+  div.panels
+  div.leftpanel
+  div.property.provided
+  .value
+  .item:not(.bad) {
+  color: var(--clr-green-fg);
+}

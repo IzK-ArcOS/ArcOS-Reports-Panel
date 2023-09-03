@@ -1,0 +1,8 @@
+@import url("./viewer/header.css");
+@import url("./viewer/panels.css");
+
+div.viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

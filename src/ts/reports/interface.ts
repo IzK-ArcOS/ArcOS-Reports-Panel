@@ -18,6 +18,8 @@ export interface Report {
   userdata?: object;
   version: string;
   metaenv: MetaEnv;
+  created: string;
+  updated: string;
 }
 
 export type ReportGroups = { [key: string]: ReportRecord[] };

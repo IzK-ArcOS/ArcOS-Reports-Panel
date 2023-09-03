@@ -1,0 +1,33 @@
+div.viewer div.panels div.rightpanel div.log {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 200px);
+}
+
+div.viewer div.panels div.rightpanel div.log h1 {
+  font-size: 12px;
+  font-family: "source Code Pro", monospace;
+  padding: 8px 10px;
+  margin: 0;
+  border-bottom: var(--bg-border);
+  display: flex;
+}
+
+div.viewer div.panels div.rightpanel div.log h1 span {
+  font-family: "source Code Pro", monospace;
+}
+
+div.viewer div.panels div.rightpanel div.log h1 span.right {
+  margin-left: auto;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1300px) {
+  div.viewer div.panels div.rightpanel div.log {
+    height: 232px !important;
+  }
+
+  div.viewer div.panels div.rightpanel div.log textarea {
+    height: 200px;
+  }
+}

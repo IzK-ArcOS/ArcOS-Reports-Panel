@@ -6,19 +6,24 @@
 div.dashboard div.card {
   background-color: var(--button-active-bg);
   width: 100%;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 0;
+  padding: 0;
   position: relative;
   margin-top: 35px;
-  box-shadow: 0px 5px 15px 5px #0002;
+  border-top: var(--bg-border);
+  border-bottom: var(--bg-border);
+}
+
+div.dashboard div.card:last-child {
+  border-bottom: none;
 }
 
 div.dashboard div.card::before {
   content: "banana";
-  font-size: 15px;
+  font-size: 12px;
   font-weight: bold;
   position: absolute;
-  top: -30px;
+  top: -26px;
   left: 10px;
   font-family: "Source Code Pro", monospace;
   text-transform: uppercase;

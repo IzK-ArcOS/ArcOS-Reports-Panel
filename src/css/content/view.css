@@ -1,8 +1,14 @@
 div.content div.view {
-  padding: 5px;
+  padding: 0px;
   flex-grow: 1;
   width: 100%;
   max-width: 100%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   height: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  div.content div.view {
+    overflow-y: scroll;
+  }
 }

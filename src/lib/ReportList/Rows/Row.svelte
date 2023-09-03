@@ -7,22 +7,23 @@
   import AuthorSegment from "./Row/AuthorSegment.svelte";
   import Icon from "./Row/Icon.svelte";
   import Segment from "./Row/Segment.svelte";
+  import { Masked, ViewerId } from "../../../ts/ui";
+  import { PARAMS } from "../../../ts/env";
 
   export let report: ReportRecord;
   export let minimal: boolean;
 
-  let isSvelteWindow = false;
+  let mbTimestamp = "";
   let timestamp = "";
   let api = "";
   let noApi = false;
 
   onMount(() => {
     timestamp = dayjs(report.created).format("D MMM, HH:mm");
+    mbTimestamp = dayjs(report.created).format("D MMM");
 
     noApi = !report.api || report.api == "<api>";
     api = report.api && report.api != "<api>" ? report.api : "None";
-    isSvelteWindow = report.title.toLowerCase().startsWith("svelte:window");
-
     api = api == "arcdev.arcapi.nl" ? "ArcDev" : api;
 
     if (report.resolved && !report.closed) {
@@ -33,7 +34,11 @@
           {
             caption: "Yes, close it",
             async action() {
-              pb.collection("bugrep").update(report.id, { closed: true });
+              pb.collection("bugrep").update(
+                report.id,
+                { closed: true },
+                PARAMS
+              );
             },
           },
           { caption: "nah don't", action() {} },
@@ -41,15 +46,45 @@
       });
     }
   });
+
+  function view() {
+    if (!$Masked) return ViewerId.set(report.id);
+
+    Dialog({
+      title: "Hold on!",
+      message:
+        "BugRep is currently masked! A report might contain sensitive data about the user that submitted the report. Proceed?",
+      buttons: [
+        {
+          caption: "Open it",
+          action() {
+            ViewerId.set(report.id);
+          },
+        },
+        {
+          caption: "Go Back",
+          action() {},
+        },
+      ],
+    });
+  }
 </script>
 
-<div class="row" class:solved={report.resolved} class:closed={report.closed}>
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div
+  class="row"
+  class:solved={report.resolved}
+  class:closed={report.closed}
+  on:click={view}
+>
   {#if !minimal}
     <Icon {report} />
   {/if}
-  <Segment mleft nomask>{timestamp}</Segment>
-  <Segment grow nomask>
-    {isSvelteWindow ? "Crash Report" : report.title}
+  <Segment mleft nomask c="ts-mobile">{mbTimestamp}</Segment>
+  <Segment mleft nomask c="ts-desktop">{timestamp}</Segment>
+  <Segment grow c="body">
+    {report.body}
   </Segment>
   <AuthorSegment {report} />
   <Segment

@@ -47,8 +47,28 @@ div.reportview div.row div.segment.icon img {
   height: 20px;
 }
 
-@media screen and (max-width: 1000px) {
-  div.reportview div.row div.segment:not(.small) {
-    min-width: 100px;
+div.reportview div.row div.segment.ts-desktop {
+  display: block;
+}
+
+div.reportview div.row div.segment.ts-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  div.reportview div.row div.segment.ts-desktop {
+    display: none;
+  }
+
+  div.reportview div.row div.segment.ts-mobile {
+    display: block;
   }
 }
+
+/* 
+@media screen and (max-width: 1000px) {
+  div.reportview div.row div.segment:not(.small) {
+    /* min-width: 100px; 
+  }
+}
+ */

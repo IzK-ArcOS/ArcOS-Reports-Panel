@@ -1,0 +1,31 @@
+div.viewer-header div.actions {
+  margin-left: auto;
+  display: flex;
+}
+
+div.viewer-header div.actions button {
+  height: 40px;
+  border-left: var(--win-border);
+  width: 100px;
+  background-color: var(--bg);
+}
+
+div.viewer-header div.actions button:disabled {
+  opacity: 0.4 !important;
+  background-color: transparent !important;
+}
+
+div.viewer-header div.actions button.resolve {
+  background-color: var(--clr-green-bg);
+  color: var(--clr-green-fg);
+}
+
+div.viewer-header div.actions button.archive {
+  background-color: var(--clr-orange-bg);
+  color: var(--clr-orange-fg);
+}
+
+div.viewer-header div.actions button.delete {
+  background-color: var(--clr-red-bg);
+  color: var(--clr-red-fg);
+}

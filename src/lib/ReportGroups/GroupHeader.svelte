@@ -24,5 +24,8 @@
       <div class="segment">{$viewing}</div>
     {/if}
   </div>
+  <div class="path-mobile">
+    {$viewing || "Report List"}
+  </div>
   <div class="count">{reports}</div>
 </div>

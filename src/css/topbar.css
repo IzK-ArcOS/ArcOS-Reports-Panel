@@ -7,10 +7,10 @@ div.topbar div.controls button:active {
 }
 
 div.topbar {
-  height: 60px;
+  height: 40px;
   width: 100%;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 5px;
   display: flex;
   z-index: 100;
   background-color: var(--bg);

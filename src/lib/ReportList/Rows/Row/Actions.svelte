@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Dialog } from "../../../../ts/dialog/main";
+  import { PARAMS } from "../../../../ts/env";
   import { pb } from "../../../../ts/pb/main";
   import type { ReportRecord } from "../../../../ts/reports/interface";
   import { deleteReport } from "../../../../ts/reports/mutate";
@@ -14,11 +15,13 @@
   async function toggleResolved() {
     await pb
       .collection("bugrep")
-      .update(report.id, { resolved: !report.resolved });
+      .update(report.id, { resolved: !report.resolved }, PARAMS);
   }
 
   async function toggleClosed() {
-    await pb.collection("bugrep").update(report.id, { closed: !report.closed });
+    await pb
+      .collection("bugrep")
+      .update(report.id, { closed: !report.closed }, PARAMS);
   }
 
   async function deleteRep() {

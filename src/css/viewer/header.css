@@ -1,0 +1,84 @@
+@import url("./header/actions.css");
+
+div.viewer div.viewer-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 40px;
+  border-bottom: var(--bg-border);
+  background-color: var(--bg);
+  padding: 0;
+  padding-left: 10px;
+  overflow: hidden;
+}
+
+div.viewer div.viewer-header > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+div.viewer div.viewer-header div.title {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+div.viewer div.viewer-header div.title img {
+  height: 20px;
+}
+
+div.viewer div.viewer-header div.title div.icon {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+div.viewer div.viewer-header div.id {
+  opacity: 0.5;
+  font-size: 13px;
+  font-family: "Source Code Pro", monospace;
+}
+
+@media screen and (max-width: 1300px) {
+  div.viewer div.viewer-header {
+    flex-direction: column;
+    min-height: 80px;
+    padding: 0;
+    gap: 0;
+  }
+  div.viewer div.viewer-header div.id {
+    display: none;
+  }
+
+  div.viewer div.viewer-header > span {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+  }
+
+  div.viewer div.viewer-header span div.segment {
+    display: none !important;
+  }
+
+  div.viewer div.viewer-header div.actions {
+    margin-left: unset;
+    width: 100%;
+    border-top: var(--bg-border);
+  }
+
+  div.viewer div.viewer-header div.actions button {
+    width: 25%;
+  }
+
+  div.viewer div.viewer-header div.actions button:first-child {
+    border-left: none;
+  }
+}

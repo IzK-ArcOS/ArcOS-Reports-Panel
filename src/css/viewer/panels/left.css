@@ -1,0 +1,26 @@
+@import url("./property/client.css");
+@import url("./property/provided.css");
+@import url("./property/body.css");
+
+div.viewer div.panels div.leftpanel div.property {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 38px;
+  font-size: 13px;
+}
+
+div.viewer div.panels div.leftpanel div.property > * {
+  margin: 0;
+}
+
+div.viewer div.panels div.leftpanel div.property > .key {
+  min-width: 100px;
+}
+
+div.viewer div.panels div.leftpanel div.property > .value {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}

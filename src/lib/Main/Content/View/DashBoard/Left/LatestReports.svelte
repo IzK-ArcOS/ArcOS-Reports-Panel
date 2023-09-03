@@ -19,6 +19,6 @@
   {#if groupView}
     <ReportGroups />
   {:else}
-    <ReportList minimal opened />
+    <ReportList minimal />
   {/if}
 </div>

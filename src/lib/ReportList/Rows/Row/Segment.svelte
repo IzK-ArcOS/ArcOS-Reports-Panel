@@ -21,10 +21,7 @@
   class:self
   class:sad
   class:masked={$Masked && !nomask}
+  class:blur={$Masked && !nomask && !sad}
 >
-  {#if $Masked && !nomask && !sad}
-    <Hidden />
-  {:else}
-    <slot />
-  {/if}
+  <slot />
 </div>

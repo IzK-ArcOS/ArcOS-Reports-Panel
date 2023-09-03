@@ -1,0 +1,40 @@
+div.viewer div.panels div.rightpanel div.json {
+  display: flex;
+  height: 200px;
+}
+div.viewer div.panels div.rightpanel div.json div.object {
+  width: 50%;
+}
+
+div.viewer div.panels div.rightpanel div.json div.object:last-child {
+  border-left: var(--bg-border);
+}
+
+div.viewer div.panels div.rightpanel div.json div.object h1 {
+  font-size: 12px;
+  font-family: "source Code Pro", monospace;
+  padding: 8px 10px;
+  margin: 0;
+  border-bottom: var(--bg-border);
+}
+
+div.viewer div.panels div.rightpanel div.json div.object textarea {
+  height: calc(100% - 31px);
+}
+
+@media screen and (max-width: 1300px) {
+  div.viewer div.panels div.rightpanel div.json {
+    flex-direction: column;
+    height: 400px !important;
+  }
+
+  div.viewer div.panels div.rightpanel div.json > div {
+    width: 100% !important;
+    height: 200px;
+    border-left: none !important;
+  }
+
+  div.viewer div.panels div.rightpanel div.json div.object:last-child {
+    border-top: var(--bg-border);
+  }
+}

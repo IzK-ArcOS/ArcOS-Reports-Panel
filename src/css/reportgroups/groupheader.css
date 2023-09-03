@@ -1,12 +1,13 @@
 div.reportview.groups div.groupheader {
   display: flex;
   align-items: center;
-  background-color: var(--button-glass-bg);
+  border-bottom: var(--bg-border);
+  background-color: var(--bg);
   width: 100%;
   gap: 10px;
   padding: 0;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 0;
 }
 
 div.reportview.groups div.groupheader button.back {
@@ -14,7 +15,7 @@ div.reportview.groups div.groupheader button.back {
   height: 40px;
   padding: 0;
   background-color: transparent;
-  font-size: 20px;
+  font-size: 18px;
   border-right: var(--button-glass-hover-bg) 1px solid;
   border-radius: 0;
 }
@@ -22,7 +23,7 @@ div.reportview.groups div.groupheader button.back {
 div.reportview.groups div.groupheader div.path {
   display: flex;
   gap: 30px;
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 div.reportview.groups div.groupheader div.path span.material-icons-round {
@@ -32,6 +33,15 @@ div.reportview.groups div.groupheader div.path span.material-icons-round {
 
 div.reportview.groups div.groupheader div.path div.segment {
   position: relative;
+}
+
+div.reportview.groups div.groupheader div.path-mobile {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75%;
+  white-space: nowrap;
+  padding-left: 5px;
+  display: none;
 }
 
 div.reportview.groups
@@ -50,4 +60,13 @@ div.reportview.groups div.groupheader div.count {
   font-family: "Source Code Pro", monospace;
   margin-left: auto;
   padding-right: 15px;
+}
+
+@media screen and (max-width: 700px) {
+  div.reportview.groups div.groupheader div.path {
+    display: none;
+  }
+  div.reportview.groups div.groupheader div.path-mobile {
+    display: block;
+  }
 }

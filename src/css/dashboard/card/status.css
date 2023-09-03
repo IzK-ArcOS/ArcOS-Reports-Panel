@@ -1,6 +1,6 @@
 div.card.status {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   min-height: 100px;
   height: 100px !important;
   padding: 20px 25px !important;
@@ -20,7 +20,7 @@ div.card.status div.status::before {
   content: "";
   width: 8px;
   height: 8px;
-  border-radius: 4px;
+  border-radius: 0;
   background-color: #f0f;
 }
 
@@ -39,7 +39,12 @@ div.card.status div.status.warn::before {
 @media screen and (max-width: 800px) {
   div.card.status {
     grid-template-columns: repeat(2, auto);
-    min-height: 180px;
+    min-height: 220px;
     max-height: unset !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  div.card.status {
+    border-bottom: var(--bg-border) !important;
   }
 }

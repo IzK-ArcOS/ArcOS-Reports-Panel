@@ -1,7 +1,7 @@
 button {
   width: fit-content;
   padding: 5px 15px;
-  border-radius: 4px;
+  border-radius: 0;
   background-color: var(--button-glass-bg);
   color: var(--fg);
   border: none;

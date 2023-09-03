@@ -17,7 +17,7 @@ div.login-wrapper div.inner form {
 div.login-wrapper div.inner form input {
   padding: 5px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   background-color: var(--button-glass-bg);
   border: var(--button-bg) 1px solid;
   color: var(--fg);

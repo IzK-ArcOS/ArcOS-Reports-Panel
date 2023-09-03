@@ -1,12 +1,12 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { getIcon } from "../../../../ts/reports/icon";
-  import type { ReportRecord } from "../../../../ts/reports/interface";
-  import Segment from "./Segment.svelte";
   import desktopIcon from "../../../../assets/desktop.svg";
   import webIcon from "../../../../assets/web.svg";
+  import { getIcon } from "../../../../ts/reports/icon";
+  import type { Report } from "../../../../ts/reports/interface";
+  import Segment from "./Segment.svelte";
 
-  export let report: ReportRecord;
+  export let report: Report;
 
   let url = "";
 

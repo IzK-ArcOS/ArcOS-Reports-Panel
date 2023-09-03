@@ -7,17 +7,18 @@ div.dashboard {
 }
 
 div.dashboard > div {
-  padding: 5px;
-  padding-right: 7px;
+  padding: 0;
+  padding-right: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 0px;
   height: 100%;
 }
 
 div.dashboard > div.right {
   width: 400px;
+  border-left: var(--bg-border);
 }
 
 div.dashboard > div.left {
@@ -33,7 +34,10 @@ div.dashboard > div.left {
   div.dashboard > div.right {
     width: 100%;
     padding: 0;
-    padding-bottom: 20px;
     height: fit-content;
+  }
+
+  div.dashboard > div.right {
+    border-left: none;
   }
 }

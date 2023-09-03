@@ -12,7 +12,7 @@ export function scopeErrorDialog() {
   Dialog({
     title: "Well that sucks",
     message:
-      "You don't have the scopes for this thing... Please contact the Board if you think this is an error.",
+      "Can't access BugRep: your ArcPB account does not contain the required scopes for this resource. Please contact the Board if you believe this is an error.",
     buttons: [{ action() {}, caption: "OK" }],
   });
 }

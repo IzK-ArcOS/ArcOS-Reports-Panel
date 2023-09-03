@@ -4,7 +4,7 @@ div.reportview div.row div.segment div.hidden {
   line-height: 30px;
   color: var(--clr-yellow-fg);
   background-color: var(--button-glass-bg) !important;
-  border-radius: 15px;
+  border-radius: 0;
   text-align: center;
   gap: 10px;
   font-size: 18px;
