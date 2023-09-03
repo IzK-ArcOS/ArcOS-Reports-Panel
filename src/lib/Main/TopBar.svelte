@@ -7,7 +7,7 @@
 <div class="topbar big">
   <p class="title">
     <!-- <img src={logo} alt="" class="icon" /> -->
-    <span>ArcReports</span>
+    <span>BugRep</span>
   </p>
   <div class="controls">
     {#if $Token}

@@ -6,6 +6,7 @@ import type { Admin, Record } from "pocketbase";
 import { authNotification, scopeErrorDialog } from "./auth/notif";
 import { NotificationStore } from "../notification/main";
 import { verifyScopes } from "./auth/scopes";
+import { Masked, ViewerId, showOpened } from "../ui";
 
 export const AUTH_KEY = "bugrep-auth";
 export const UserModel = writable<Record | Admin>();
@@ -46,6 +47,9 @@ export function Logout() {
   UserModel.set(undefined);
   pb.authStore.clear();
   NotificationStore.set({});
+  ViewerId.set(null);
+  showOpened.set(true);
+  Masked.set(true);
 }
 
 export async function LoginFromStore() {

@@ -7,6 +7,15 @@ div.login-wrapper {
   align-items: center;
 }
 
+div.login-wrapper div.footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  left: 0px;
+  text-align: center;
+  opacity: 0.5;
+}
+
 div.login-wrapper div.inner form {
   display: flex;
   flex-direction: column;

@@ -5,6 +5,7 @@
   import Login from "./Login.svelte";
   import Content from "./Main/Content.svelte";
   import TopBar from "./Main/TopBar.svelte";
+  import Loader from "./Loader.svelte";
 
   let loading = false;
 
@@ -24,6 +25,6 @@
       <Login />
     {/if}
   {:else}
-    Loading...
+    <Loader>Authenticating...</Loader>
   {/if}
 </div>

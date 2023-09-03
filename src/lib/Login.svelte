@@ -64,4 +64,5 @@
       </div>
     </form>
   </div>
+  <div class="footer">ArcOS Confidential - Licensed under GPLv3</div>
 </div>
