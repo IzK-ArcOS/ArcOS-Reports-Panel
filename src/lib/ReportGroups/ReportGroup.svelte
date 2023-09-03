@@ -1,12 +1,11 @@
 <script lang="ts">
-  import type { Writable } from "svelte/store";
+  import { groupName } from "../../ts/ui";
 
   export let caption: string;
-  export let viewing: Writable<string>;
   export let count: number;
 
   function navigate() {
-    $viewing = caption;
+    $groupName = caption;
   }
 </script>
 

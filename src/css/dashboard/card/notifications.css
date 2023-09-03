@@ -1,6 +1,7 @@
 div.card.notifications {
   flex-grow: 1;
   padding: 10px !important;
+  overflow-y: scroll;
 }
 
 div.card.notifications div.notif-wrapper {
@@ -18,6 +19,7 @@ div.card.notifications div.notif-wrapper p.none {
 div.card.notifications div.notif-wrapper div.notification {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 div.card.notifications div.notif-wrapper div.notification h1 {

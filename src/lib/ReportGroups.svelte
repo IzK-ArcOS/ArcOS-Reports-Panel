@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { writable } from "svelte/store";
   import { groupReports } from "../ts/reports/grouping";
   import type { ReportGroups, ReportRecord } from "../ts/reports/interface";
   import { Reports } from "../ts/reports/main";
+  import { groupName } from "../ts/ui";
   import GroupHeader from "./ReportGroups/GroupHeader.svelte";
   import ReportGroup from "./ReportGroups/ReportGroup.svelte";
   import ReportList from "./ReportList.svelte";
@@ -10,11 +10,10 @@
   export let data: ReportRecord[] = [];
   export let opened: boolean;
 
-  let viewing = writable<string>("");
   let groups: ReportGroups = {};
   let filtered: ReportRecord[] = [];
 
-  viewing.subscribe((v) => {
+  groupName.subscribe((v) => {
     const reports = data && data.length ? data : $Reports;
 
     if (!v) return (filtered = reports);
@@ -30,10 +29,10 @@
 </script>
 
 <div class="reportview groups">
-  <GroupHeader bind:viewing reports={filtered.length} />
-  {#if !$viewing}
+  <GroupHeader reports={filtered.length} />
+  {#if !$groupName}
     {#each Object.entries(groups) as entry}
-      <ReportGroup caption={entry[0]} bind:viewing count={entry[1].length} />
+      <ReportGroup caption={entry[0]} count={entry[1].length} />
     {/each}
   {:else}
     <ReportList data={filtered} minimal bind:opened />

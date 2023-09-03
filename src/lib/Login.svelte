@@ -44,6 +44,7 @@
 <div class="login-wrapper">
   <div class="inner">
     <img src={logo} alt="" />
+    <h1>{!forgot ? "Login to BugRep" : "Enter Email to Reset"}</h1>
     <form on:submit={submit}>
       <input type="text" bind:value={username} placeholder="Email" />
       {#if !forgot}
