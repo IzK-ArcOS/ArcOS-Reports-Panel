@@ -1,5 +1,6 @@
 div.viewer div.panels div.leftpanel div.property.client {
   height: 64px;
+  min-height: 64px;
   padding: 0 10px;
   align-items: start;
   overflow: hidden;
@@ -31,6 +32,7 @@ div.viewer div.panels div.leftpanel div.property.client .value div.flags {
 @media screen and (max-width: 1300px) {
   div.viewer div.panels div.leftpanel div.property.client {
     height: fit-content;
+    min-height: 100px;
   }
   div.viewer div.panels div.leftpanel div.property.client .value {
     flex-direction: column;

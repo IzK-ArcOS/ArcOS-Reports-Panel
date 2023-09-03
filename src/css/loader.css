@@ -45,12 +45,13 @@ div.loader.inlined {
   text-align: left;
 }
 
-div.loader.inlined .spinner {
+div.loader.inlined .spinner,
+.spinner.tiny {
   display: inline-block;
   height: 15px;
   width: 15px;
   border: 2.5px solid transparent;
-  border-top: 2.5px solid inherit;
+  border-top: 2.5px solid currentColor;
   margin: 0;
   margin-right: 5px;
 }

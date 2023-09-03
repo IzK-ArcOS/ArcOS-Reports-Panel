@@ -27,7 +27,9 @@
         },
         {
           caption: "STOP!",
-          action: () => {},
+          action: () => {
+            loading = false;
+          },
         },
       ],
     });
@@ -38,6 +40,6 @@
   {#if !loading}
     Delete
   {:else}
-    <div class="spinner small" />
+    <div class="spinner tiny" />
   {/if}
 </button>

@@ -3,7 +3,7 @@
 div.viewer div.viewer-header {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   width: 100%;
   height: 40px;
   border-bottom: var(--bg-border);
@@ -16,10 +16,11 @@ div.viewer div.viewer-header {
 div.viewer div.viewer-header > span {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  flex-grow: 1;
 }
 
 div.viewer div.viewer-header div.title {
@@ -45,6 +46,20 @@ div.viewer div.viewer-header div.id {
   opacity: 0.5;
   font-size: 13px;
   font-family: "Source Code Pro", monospace;
+  margin-left: 10px;
+}
+
+div.viewer div.viewer-header button.material-icons-round {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  font-size: 18px;
+  background-color: transparent;
+  border-left: var(--bg-border);
+}
+
+div.viewer div.viewer-header button.material-icons-round:nth-child(3) {
+  margin-left: auto;
 }
 
 @media screen and (max-width: 1100px) {
@@ -62,6 +77,11 @@ div.viewer div.viewer-header div.id {
     width: 100%;
     height: 40px;
     padding: 0 10px;
+  }
+
+  div.viewer div.viewer-header div.title {
+    max-width: 50%;
+    overflow: hidden;
   }
 
   div.viewer div.viewer-header span div.segment {

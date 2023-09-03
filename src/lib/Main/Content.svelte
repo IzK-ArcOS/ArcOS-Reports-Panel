@@ -5,6 +5,7 @@
   import View from "./Content/View.svelte";
   import { Masked, ViewerId } from "../../ts/ui";
   import Loader from "../Loader.svelte";
+  import { navigate } from "svelte-navigator";
 
   let loading = false;
 
@@ -21,6 +22,7 @@
     Masked.set(false);
     ViewerId.set(id);
     loading = false;
+    navigate("./");
   });
 </script>
 

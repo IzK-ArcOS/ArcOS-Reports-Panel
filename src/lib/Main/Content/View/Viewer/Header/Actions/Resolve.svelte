@@ -2,6 +2,7 @@
   import { Dialog } from "../../../../../../../ts/dialog/main";
   import type { Report } from "../../../../../../../ts/reports/interface";
   import { resolveReport } from "../../../../../../../ts/reports/mutate";
+  import { ViewerId } from "../../../../../../../ts/ui";
 
   let loading = false;
   export let data: Report;
@@ -10,18 +11,22 @@
     loading = true;
     Dialog({
       title: "Confirm Resolve?",
-      message: "Are you sure you want to resolve this report?",
+      message:
+        "Are you sure you want to close the viewer and resolve this report?",
       buttons: [
         {
           caption: "Yeah, resolve it",
           action: async () => {
             await resolveReport(data.id);
             loading = false;
+            ViewerId.set(null);
           },
         },
         {
           caption: "Abort!",
-          action: () => {},
+          action: () => {
+            loading = false;
+          },
         },
       ],
     });
@@ -40,6 +45,6 @@
       ? "Resolved"
       : "Resolve"}
   {:else}
-    <div class="spinner" />
+    <div class="spinner tiny" />
   {/if}
 </button>

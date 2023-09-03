@@ -5,7 +5,5 @@
 </script>
 
 <div class="viewer-body">
-  <textarea class="body" spellcheck={false} readonly>
-    {data.body}
-  </textarea>
+  <textarea class="body" spellcheck={false} readonly value={data.body} />
 </div>
