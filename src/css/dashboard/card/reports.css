@@ -8,13 +8,37 @@ div.dashboard div.card.latest-reports.groupView {
 }
 
 div.dashboard div.card.latest-reports button.mode {
-  position: absolute;
-  top: -32.5px;
-  right: 10px;
   padding: 0;
   margin: 0;
   background-color: transparent;
   font-size: 20px;
+}
+
+div.dashboard div.card.latest-reports div.actions {
+  position: absolute;
+  top: -36px;
+  height: 35px;
+  width: fit-content;
+  padding-right: 10px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+div.dashboard div.card.latest-reports div.actions div.tabs {
+  display: flex;
+  border-left: var(--bg-border);
+  border-right: var(--bg-border);
+}
+
+div.dashboard div.card.latest-reports div.actions div.tabs button {
+  height: 35px;
+  width: 80px;
+}
+
+div.dashboard div.card.latest-reports div.actions div.tabs button.selected {
+  background-color: var(--button-bg);
 }
 
 @media screen and (max-width: 800px) {

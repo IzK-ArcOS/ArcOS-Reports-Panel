@@ -27,7 +27,7 @@
       "url": "/",
       "icons": [
         {
-          "src": "./egg.png",
+          "src": "./dev.png",
           "sizes": "768x768"
         }
       ]

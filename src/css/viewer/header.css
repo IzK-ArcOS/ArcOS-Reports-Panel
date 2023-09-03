@@ -47,7 +47,7 @@ div.viewer div.viewer-header div.id {
   font-family: "Source Code Pro", monospace;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1100px) {
   div.viewer div.viewer-header {
     flex-direction: column;
     min-height: 80px;

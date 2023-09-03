@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Masked } from "../../../ts/ui";
 </script>
 

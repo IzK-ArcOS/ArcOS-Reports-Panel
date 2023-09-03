@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import "../../css/topbar.css";
   import { Token } from "../../ts/pb/main";
   import Controls from "./TopBar/Controls.svelte";

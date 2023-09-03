@@ -1,10 +1,11 @@
 <script lang="ts">
   import { Dialog } from "../../../../../../ts/dialog/main";
-  import { PARAMS } from "../../../../../../ts/env";
-  import { pb } from "../../../../../../ts/pb/main";
   import type { Report } from "../../../../../../ts/reports/interface";
-  import { Reports } from "../../../../../../ts/reports/main";
-  import { getReportsStats } from "../../../../../../ts/reports/statistics/main";
+  import {
+    archiveReport,
+    deleteReport,
+    resolveReport,
+  } from "../../../../../../ts/reports/mutate";
   import { ViewerId } from "../../../../../../ts/ui";
 
   export let data: Report;
@@ -20,15 +21,8 @@
       buttons: [
         {
           caption: "Yeah, do it",
-          action: () => {
-            pb.collection("bugrep").update(
-              data.id,
-              {
-                closed: true,
-              },
-              PARAMS
-            );
-            Reports.set($Reports);
+          action: async () => {
+            await archiveReport(data.id);
           },
         },
         {
@@ -46,16 +40,8 @@
       buttons: [
         {
           caption: "Yeah, resolve it",
-          action: () => {
-            pb.collection("bugrep").update(
-              data.id,
-              {
-                resolved: true,
-                closed: true,
-              },
-              PARAMS
-            );
-            Reports.set($Reports);
+          action: async () => {
+            await resolveReport(data.id);
           },
         },
         {
@@ -74,8 +60,8 @@
       buttons: [
         {
           caption: "Delete it",
-          action: () => {
-            pb.collection("bugrep").delete(data.id, PARAMS);
+          action: async () => {
+            await deleteReport(data.id);
             ViewerId.set(null);
           },
         },

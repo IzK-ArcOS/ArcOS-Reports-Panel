@@ -8,6 +8,7 @@
   import ReportList from "./ReportList.svelte";
 
   export let data: ReportRecord[] = [];
+  export let opened: boolean;
 
   let viewing = writable<string>("");
   let groups: ReportGroups = {};
@@ -35,6 +36,6 @@
       <ReportGroup caption={entry[0]} bind:viewing count={entry[1].length} />
     {/each}
   {:else}
-    <ReportList data={filtered} minimal />
+    <ReportList data={filtered} minimal bind:opened />
   {/if}
 </div>

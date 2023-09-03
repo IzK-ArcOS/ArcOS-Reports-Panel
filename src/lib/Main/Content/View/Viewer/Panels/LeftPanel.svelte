@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { Report } from "../../../../../../ts/reports/interface";
+  import Status from "../../DashBoard/Left/Status.svelte";
   import Body from "./LeftPanel/Body.svelte";
   import Client from "./LeftPanel/Client.svelte";
   import CreatedBy from "./LeftPanel/CreatedBy.svelte";
@@ -18,5 +19,6 @@
     <Client {data} />
     <Provided {data} />
     <Body {data} />
+    <Status />
   </div>
 {/if}

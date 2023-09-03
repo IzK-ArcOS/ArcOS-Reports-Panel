@@ -24,3 +24,9 @@ div.viewer div.panels div.leftpanel div.property > .value {
   text-overflow: ellipsis;
   max-width: 90%;
 }
+
+@media screen and (max-width: 1200px) {
+  div.viewer div.panels div.leftpanel div.card.status {
+    display: none;
+  }
+}
