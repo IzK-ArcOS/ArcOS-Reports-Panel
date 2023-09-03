@@ -15,13 +15,19 @@ div.login-wrapper div.inner form {
 }
 
 div.login-wrapper div.inner form input {
-  padding: 5px 15px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 0;
   background-color: var(--button-glass-bg);
   border: var(--button-bg) 1px solid;
   color: var(--fg);
-  width: 250px;
+  width: 300px;
+  border-radius: 4px;
+}
+
+div.login-wrapper div.inner form button {
+  border-radius: 4px;
+  padding: 10px 20px;
+  height: unset;
 }
 
 div.login-wrapper div.inner img {
@@ -29,4 +35,27 @@ div.login-wrapper div.inner img {
   margin: 0 auto;
   margin-bottom: 30px;
   height: 150px;
+}
+
+div.login-wrapper div.inner form div.buttons {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  align-items: center;
+}
+div.login-wrapper div.inner form div.buttons button.login {
+  margin-left: auto;
+}
+
+div.login-wrapper div.inner form div.buttons button.flat {
+  padding: 0;
+  margin: 0;
+  height: fit-content;
+  background-color: transparent;
+  color: var(--clr-blue-fg);
+  text-underline-offset: 5px;
+}
+
+div.login-wrapper div.inner form div.buttons button.flat:hover {
+  text-decoration: underline;
 }

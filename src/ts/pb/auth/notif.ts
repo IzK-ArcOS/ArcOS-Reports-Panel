@@ -16,3 +16,12 @@ export function scopeErrorDialog() {
     buttons: [{ action() {}, caption: "OK" }],
   });
 }
+
+export function authFailed() {
+  Dialog({
+    title: "Authentication failed.",
+    message:
+      "The server did not permit the login attempt. Please check the entered credentials and try again.",
+    buttons: [{ caption: "OK", action() {} }],
+  });
+}
