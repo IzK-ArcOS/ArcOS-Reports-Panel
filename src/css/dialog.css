@@ -66,6 +66,7 @@ div.dialog-wrapper div.dialog div.buttons button {
 @media screen and (max-width: 500px) {
   div.dialog-wrapper div.dialog {
     width: 100%;
+    max-width: unset;
     border-right: none;
     border-left: none;
     border-radius: 0;
