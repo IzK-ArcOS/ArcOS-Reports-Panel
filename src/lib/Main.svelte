@@ -6,6 +6,7 @@
   import Content from "./Main/Content.svelte";
   import TopBar from "./Main/TopBar.svelte";
   import Loader from "./Loader.svelte";
+  import SideBar from "./Main/SideBar.svelte";
 
   let loading = false;
 
@@ -21,6 +22,7 @@
   {#if !loading}
     {#if $Token}
       <Content />
+      <SideBar />
     {:else}
       <Login />
     {/if}

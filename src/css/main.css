@@ -14,6 +14,7 @@
 @import url("./dialog.css");
 @import url("./dashboard.css");
 @import url("./viewer.css");
+@import url("./sidebar.css");
 
 *:not(.material-icons-round) {
   font-family: "Nunito Sans", sans-serif;

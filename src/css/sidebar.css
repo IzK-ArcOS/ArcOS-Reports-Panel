@@ -1,0 +1,76 @@
+div.sidebar-shade {
+  position: absolute;
+  top: 40px;
+  left: 0px;
+  width: 100%;
+  height: calc(100% - 40px);
+  background-color: #0004;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+
+div.sidebar {
+  position: absolute;
+  top: 40px;
+  left: -80%;
+  width: 80%;
+  height: calc(100% - 40px);
+  background-color: var(--win-bg);
+  border-right: var(--win-border);
+  display: none;
+}
+
+div.sidebar-shade.opened {
+  pointer-events: initial;
+  visibility: visible;
+  opacity: 1;
+}
+
+div.sidebar.opened {
+  left: 0px;
+}
+
+div.topbar button.menu-toggle {
+  display: none;
+}
+
+div.sidebar div.statistics {
+  height: 80px;
+  grid-template-columns: repeat(4, auto);
+  padding: 15px !important;
+  border-bottom: var(--bg-border);
+}
+
+div.sidebar > div.status {
+  padding: 10px 20px !important;
+  grid-gap: 0px;
+  height: 150px !important;
+  min-height: unset;
+  gap: 0;
+  border-top: var(--bg-border);
+  border-bottom: none !important;
+}
+
+div.sidebar div.notifications {
+  height: calc(100% - 80px - 150px) !important;
+}
+div.sidebar > div.status div.status {
+  padding: 0;
+}
+
+div.sidebar div.statistics > *:last-child {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  div.topbar button.menu-toggle {
+    display: block;
+  }
+
+  div.sidebar,
+  div.sidebar-shade {
+    display: block;
+  }
+}

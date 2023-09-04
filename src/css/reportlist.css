@@ -14,6 +14,6 @@ div.card.latest-reports:not(.groupView) div.reportview {
 
 @media screen and (max-width: 1000px) {
   div.reportview.list {
-    max-height: 90vh;
+    max-height: 100%;
   }
 }

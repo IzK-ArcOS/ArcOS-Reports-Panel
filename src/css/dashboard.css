@@ -39,5 +39,14 @@ div.dashboard > div.left {
 
   div.dashboard > div.right {
     border-left: none;
+    display: none;
+  }
+
+  div.dashboard > div.left div.card.status {
+    display: none;
+  }
+
+  div.dashboard > div.left {
+    height: 100%;
   }
 }

@@ -12,6 +12,13 @@ div.topbar p.title {
   font-size: 20px;
   line-height: 20px !important;
   align-items: center;
+  gap: 10px;
+}
+
+div.topbar button.menu-toggle {
+  padding: 0;
+  background-color: transparent;
+  font-size: 16px;
 }
 
 div.topbar p.title * {

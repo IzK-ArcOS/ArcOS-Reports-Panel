@@ -15,7 +15,6 @@
   pb.collection("bugrep").subscribe("*", update);
 
   async function update() {
-    console.log("UPDATING! ", data ? data.id : "ID");
     if (!$ViewerId) return;
 
     data = null;

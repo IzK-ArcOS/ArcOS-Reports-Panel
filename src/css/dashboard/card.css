@@ -43,7 +43,7 @@ div.dashboard div.card.notifications::before {
 }
 
 div.dashboard div.card.latest-reports::before {
-  content: "Open Reports";
+  content: "All Reports";
 }
 
 div.dashboard div.card.statistics::before {

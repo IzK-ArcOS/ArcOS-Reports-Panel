@@ -8,7 +8,7 @@
   function copyIt() {
     Dialog({
       title: "Copy Report...",
-      message: `Please be so kind to choose how to copy Bug Report ${data.id} to your clipboard. Click cancel to leave the clipboard untouched.`,
+      message: `Please be so kind to choose how to copy Bug Report ${data.id} to your clipboard. Click Cancel to leave the clipboard untouched.`,
       buttons: [
         {
           caption: "Mark Down",

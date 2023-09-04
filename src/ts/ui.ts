@@ -5,3 +5,4 @@ export const GitConnected = writable<boolean>(false);
 export const ViewerId = writable<string>("");
 export const showOpened = writable<boolean>(true);
 export const groupName = writable<string>("");
+export const sideBarOpened = writable<boolean>(false);

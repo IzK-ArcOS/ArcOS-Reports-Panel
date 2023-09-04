@@ -15,8 +15,6 @@ export async function getUptimes(): Promise<Uptime> {
       Heartbeat[]
     ][];
 
-    console.dir(heartbeats);
-
     for (let i = 0; i < heartbeats.length; i++) {
       const [id, beats] = heartbeats[i];
 

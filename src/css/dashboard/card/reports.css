@@ -45,6 +45,6 @@ div.dashboard div.card.latest-reports div.actions div.tabs button.selected {
   div.dashboard div.card.latest-reports {
     min-height: unset !important;
     flex-grow: 0;
-    max-height: 70vh;
+    height: calc(100% - 35px);
   }
 }
