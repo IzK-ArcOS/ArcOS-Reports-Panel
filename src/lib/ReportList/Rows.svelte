@@ -18,8 +18,10 @@
   });
 </script>
 
-{#if reports}
+{#if reports && reports.length}
   {#each reports as report}
     <Row {report} {minimal} />
   {/each}
+{:else}
+  <div class="none">Didn't find anything...</div>
 {/if}

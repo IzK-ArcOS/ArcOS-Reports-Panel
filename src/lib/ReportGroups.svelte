@@ -24,7 +24,7 @@
   Reports.subscribe((v) => {
     v = v && v.length ? v : [];
 
-    groups = groupReports(data.length ? data : v);
+    groups = groupReports(data.length ? data : v, opened);
   });
 </script>
 
@@ -34,6 +34,9 @@
     {#each Object.entries(groups) as entry}
       <ReportGroup caption={entry[0]} count={entry[1].length} />
     {/each}
+    {#if !Object.entries(groups).length}
+      <div class="none">Didn't find anything...</div>
+    {/if}
   {:else}
     <ReportList data={filtered} minimal bind:opened />
   {/if}

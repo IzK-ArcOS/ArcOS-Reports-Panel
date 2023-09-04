@@ -8,6 +8,14 @@ div.reportview.list {
   overflow-y: scroll;
 }
 
+div.reportview div.none {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+  font-style: italic;
+  opacity: 0.5;
+}
+
 div.card.latest-reports:not(.groupView) div.reportview {
   height: 100%;
 }

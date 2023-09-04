@@ -17,7 +17,7 @@ div.sidebar {
   left: -80%;
   width: 80%;
   height: calc(100% - 40px);
-  background-color: var(--win-bg);
+  background-color: var(--button-active-bg);
   border-right: var(--win-border);
   display: none;
 }
