@@ -27,7 +27,7 @@
 * {
   user-select: none;
   box-sizing: border-box;
-  transition: all 0.2s, color 0.08s, font-size 0s;
+  transition: all 0.25s, color 0.08s, font-size 0s;
 }
 
 body {

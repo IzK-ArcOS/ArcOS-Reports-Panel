@@ -76,7 +76,7 @@ div.viewer div.viewer-header button.material-icons-round:nth-child(3) {
   div.viewer div.viewer-header > span {
     width: 100%;
     height: 40px;
-    padding: 0 10px;
+    padding-left: 10px;
   }
 
   div.viewer div.viewer-header div.title {

@@ -18,7 +18,11 @@ div.topbar p.title {
 div.topbar button.menu-toggle {
   padding: 0;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px !important;
+  border-right: var(--bg-border);
+  margin-right: 5px !important;
 }
 
 div.topbar p.title * {
@@ -39,4 +43,10 @@ div.topbar.big img.icon {
   height: 16px !important;
   margin: 0 !important;
   margin-right: 5px !important;
+}
+
+@media screen and (max-width: 1000px) {
+  div.topbar p.title {
+    padding-left: 0;
+  }
 }

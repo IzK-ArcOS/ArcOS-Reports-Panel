@@ -2,7 +2,7 @@ div.topbar div.controls {
   margin-left: auto;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0px;
 }
 
 div.topbar div.controls div.status-wrapper {
@@ -67,15 +67,16 @@ div.topbar div.controls div.status span.material-icons-round {
 }
 
 div.topbar div.controls button.material-icons-round {
-  font-size: 16px;
-  width: 20px;
-  height: 20px;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
   border-radius: 0;
   margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
   color: var(--fg);
+  border-left: var(--bg-border);
 }
 
 div.topbar div.controls button.material-icons-round:hover {
