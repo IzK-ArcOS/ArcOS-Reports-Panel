@@ -1,7 +1,10 @@
 <script lang="ts">
   import { Dialog } from "../../../../../../../ts/dialog/main";
   import type { Report } from "../../../../../../../ts/reports/interface";
-  import { archiveReport } from "../../../../../../../ts/reports/mutate";
+  import {
+    archiveReport,
+    unArchive,
+  } from "../../../../../../../ts/reports/mutate";
   import { ViewerId } from "../../../../../../../ts/ui";
 
   let loading = false;
@@ -10,13 +13,21 @@
   async function archive() {
     loading = true;
     Dialog({
-      title: "Confirm Archive?",
-      message:
-        "Are you really, really sure you want to close the viewer and archive this report?",
+      title: data.resolved ? "Confirm Unarchive?" : "Confirm Archive?",
+      message: data.resolved
+        ? "Are you sure you want to unarchive this report?"
+        : "Are you sure you want to close the viewer and archive this report?",
       buttons: [
         {
-          caption: "Yeah, do it",
+          caption: "Continue",
           action: async () => {
+            if (data.resolved) {
+              await unArchive(data.id);
+              loading = false;
+
+              return;
+            }
+
             await archiveReport(data.id);
             loading = false;
             ViewerId.set(null);
@@ -33,9 +44,9 @@
   }
 </script>
 
-<button class="archive" disabled={data.closed} on:click={archive}>
+<button class="archive" on:click={archive} class:revert={data.closed}>
   {#if !loading}
-    {data.closed ? "Archived" : "Archive"}
+    {data.closed ? "Unarchive" : "Archive"}
   {:else}
     <div class="spinner tiny" />
   {/if}

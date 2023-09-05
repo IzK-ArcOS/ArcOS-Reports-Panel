@@ -29,3 +29,7 @@ div.viewer-header div.actions button.delete {
   background-color: var(--clr-red-bg);
   color: var(--clr-red-fg);
 }
+
+div.viewer-header div.actions button.revert {
+  background-color: var(--button-glass-bg);
+}

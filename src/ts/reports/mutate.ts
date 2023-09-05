@@ -35,3 +35,23 @@ export async function resolveReport(id: string): Promise<boolean> {
     .collection("bugrep")
     .update(id, { resolved: true, closed: true }, PARAMS);
 }
+
+export async function unResolve(id: string): Promise<boolean> {
+  Notification({
+    title: "Reopening report",
+    message: `Contacting the server to reopen report with id ${id}...`,
+  });
+
+  return await pb
+    .collection("bugrep")
+    .update(id, { resolved: false, closed: false }, PARAMS);
+}
+
+export async function unArchive(id: string): Promise<boolean> {
+  Notification({
+    title: "Unarchiving report",
+    message: `Contacting the server to unarchive report with id ${id}...`,
+  });
+
+  return await pb.collection("bugrep").update(id, { closed: false }, PARAMS);
+}
