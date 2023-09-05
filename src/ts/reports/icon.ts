@@ -5,12 +5,12 @@ import resolvedIcon from "../../assets/report/resolved.svg";
 import type { Report } from "./interface";
 import { getReportIssue } from "./issues";
 
-export async function getIcon(report: Report): Promise<string> {
-  if (report.closed) return closedIcon;
+export async function getIcon(report: Report): Promise<[string, string]> {
+  if (report.closed) return ["archived", closedIcon];
 
-  if (report.resolved) return resolvedIcon;
+  if (report.resolved) return ["resolved", resolvedIcon];
 
-  if (await getReportIssue(report.id)) return issuedIcon;
+  if (await getReportIssue(report.id)) return ["issued", issuedIcon];
 
-  return normalIcon;
+  return ["normal", normalIcon];
 }

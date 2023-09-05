@@ -44,9 +44,14 @@
   }
 </script>
 
-<button class="resolve" on:click={resolve} class:revert={data.resolved}>
+<button
+  class="resolve"
+  on:click={resolve}
+  class:revert={data.resolved}
+  disabled={data.closed}
+>
   {#if !loading}
-    {data.resolved ? "Reopen" : "Resolve"}
+    {data.closed ? "Unresolved!" : data.resolved ? "Reopen" : "Resolve"}
   {:else}
     <div class="spinner tiny" />
   {/if}

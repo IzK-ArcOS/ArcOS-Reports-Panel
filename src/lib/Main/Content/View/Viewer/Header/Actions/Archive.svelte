@@ -13,15 +13,15 @@
   async function archive() {
     loading = true;
     Dialog({
-      title: data.resolved ? "Confirm Unarchive?" : "Confirm Archive?",
-      message: data.resolved
+      title: data.closed ? "Confirm Unarchive?" : "Confirm Archive?",
+      message: data.closed
         ? "Are you sure you want to unarchive this report?"
         : "Are you sure you want to close the viewer and archive this report?",
       buttons: [
         {
           caption: "Continue",
           action: async () => {
-            if (data.resolved) {
+            if (data.closed) {
               await unArchive(data.id);
               loading = false;
 

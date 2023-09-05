@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { showOpened } from "../../../../../../ts/ui";
+  import { GetReports, Reports } from "../../../../../../ts/reports/main";
+  import { ViewerId, showOpened } from "../../../../../../ts/ui";
   import Loader from "../../../../../Loader.svelte";
   import ReportGroups from "../../../../../ReportGroups.svelte";
   import ReportList from "../../../../../ReportList.svelte";
@@ -9,6 +10,14 @@
   let loading = false;
 
   const toggle = () => (groupView = !groupView);
+
+  ViewerId.subscribe(async (v) => {
+    if (!v) {
+      loading = true;
+      Reports.set(await GetReports());
+      loading = false;
+    }
+  });
 </script>
 
 <div class="card latest-reports" class:groupView>
