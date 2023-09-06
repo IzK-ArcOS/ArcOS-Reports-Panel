@@ -1,0 +1,107 @@
+<script lang="ts">
+  import { onMount } from "svelte";
+  import { ViewerId } from "../../ts/ui";
+  import { pb } from "../../ts/pb/main";
+  import { createReportIssue } from "../../ts/issues/main";
+  import { Dialog, disposeDialog } from "../../ts/dialog/main";
+  import secure from "../../assets/secure.svg";
+  import sleep from "../../ts/sleep";
+
+  export let id: string;
+  export let visible: boolean;
+
+  let username = "";
+  let password = "";
+
+  onMount(() => {
+    if (!pb.authStore.model) return;
+
+    username = pb.authStore.model.username;
+  });
+
+  async function createIt() {
+    if (!$ViewerId || !password) return;
+
+    const code = await createReportIssue($ViewerId, password);
+
+    let title: string;
+    let message: string;
+
+    switch (code) {
+      case 404:
+        title = "That's impossible";
+        message =
+          "ArcPB could not find the report! That means that either it was abducted by aliens or you messed with the frontend. Don't do that.";
+        break;
+      case 500:
+        title = "GitHub Failed Us";
+        message =
+          "Could not create the GitHub issue. we may be rate limited. Oh well.";
+        break;
+      case 403:
+        title = "Could not log you in";
+        message =
+          "Either you entered your password wrong or you're missing the BRISSUE scope. Please check with The Board if it's the latter.";
+        break;
+      default:
+        title = "Created!";
+        message =
+          "It appears that the GitHub issue was created successfully. It should show up on the Frontend issues page.";
+        break;
+    }
+
+    visible = false;
+
+    await sleep(400);
+
+    disposeDialog(id);
+
+    await sleep(0);
+
+    Dialog({
+      title,
+      message,
+      buttons: [
+        {
+          caption: "Okay",
+          action() {
+            ViewerId.set(null);
+          },
+        },
+      ],
+    });
+  }
+
+  function submit(e: SubmitEvent) {
+    e.preventDefault();
+  }
+</script>
+
+<div class="twopane">
+  <div class="left">
+    <img src={secure} alt="" />
+  </div>
+  <div class="right">
+    <h3 class="title">Create Report Issue</h3>
+    <p>
+      {username}, you're about to create a GitHub issue for report {$ViewerId ||
+        "<unknown>"}. Please enter your password to continue.
+    </p>
+    <form on:submit={submit} />
+    <input
+      type="password"
+      class="block"
+      bind:value={password}
+      placeholder="Password for {username}"
+    />
+    <div class="bottom">
+      <button on:click={() => disposeDialog(id)}>Cancel</button>
+      <button
+        disabled={!username || !$ViewerId || !password}
+        on:click={createIt}
+      >
+        Continue
+      </button>
+    </div>
+  </div>
+</div>

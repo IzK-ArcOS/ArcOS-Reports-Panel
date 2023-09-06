@@ -1,8 +1,10 @@
 export interface Dialog {
-  title: string;
-  message: string;
-  buttons: Button[];
+  title?: string;
+  message?: string;
+  element?: any;
+  buttons?: Button[];
   image?: string;
+  className?: string;
 }
 
 export interface Button {

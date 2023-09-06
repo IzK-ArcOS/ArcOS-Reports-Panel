@@ -1,3 +1,6 @@
+@import url("./dialog/twopane.css");
+@import url("./dialog/brissue-sudo.css");
+
 div.dialog-wrapper {
   position: fixed;
   top: 0px;
@@ -57,10 +60,24 @@ div.dialog-wrapper div.dialog div.buttons {
   gap: 10px;
 }
 
-div.dialog-wrapper div.dialog div.buttons button {
+div.dialog-wrapper div.dialog button {
   height: fit-content;
   min-width: 70px;
   border-radius: 4px;
+}
+
+div.dialog-wrapper div.dialog input {
+  background-color: var(--win-bg);
+  border: var(--win-border);
+  color: var(--fg);
+  border-radius: var(--button-border-rad, 4px);
+  padding: 3.5px;
+}
+
+div.dialog-wrapper div.dialog input.block {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 @media screen and (max-width: 500px) {
