@@ -72,36 +72,31 @@
     });
   }
 
-  function submit(e: SubmitEvent) {
-    e.preventDefault();
+  async function cancel() {
+    visible = false;
+    await sleep(400);
+    disposeDialog(id);
   }
 </script>
 
-<div class="twopane">
-  <div class="left">
-    <img src={secure} alt="" />
-  </div>
-  <div class="right">
-    <h3 class="title">Create Report Issue</h3>
-    <p>
-      {username}, you're about to create a GitHub issue for report {$ViewerId ||
-        "<unknown>"}. Please enter your password to continue.
-    </p>
-    <form on:submit={submit} />
-    <input
-      type="password"
-      class="block"
-      bind:value={password}
-      placeholder="Password for {username}"
-    />
-    <div class="bottom">
-      <button on:click={() => disposeDialog(id)}>Cancel</button>
-      <button
-        disabled={!username || !$ViewerId || !password}
-        on:click={createIt}
-      >
-        Continue
-      </button>
-    </div>
-  </div>
+<div class="top">
+  <img src={secure} alt="" />
+  <p>BugRep Secure Context</p>
+</div>
+<p class="sub">You're about to perform a potentially destructive action</p>
+<p class="context">
+  <b>{username}</b>, you're about to create a GitHub issue for report
+  <b>{$ViewerId || "<unknown>"}</b>. Please enter your password to continue.
+</p>
+<input
+  type="password"
+  class="password"
+  bind:value={password}
+  placeholder="Password for {username}"
+/>
+<div class="buttons">
+  <button on:click={cancel}>Cancel</button>
+  <button disabled={!username || !$ViewerId || !password} on:click={createIt}>
+    Authorize
+  </button>
 </div>
