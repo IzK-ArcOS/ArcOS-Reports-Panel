@@ -10,6 +10,7 @@
   export let id: string;
   export let visible: boolean;
 
+  let loading = false;
   let username = "";
   let password = "";
 
@@ -21,6 +22,8 @@
 
   async function createIt() {
     if (!$ViewerId || !password) return;
+
+    return (loading = true);
 
     const code = await createReportIssue($ViewerId, password);
 
@@ -88,15 +91,27 @@
   <b>{username}</b>, you're about to create a GitHub issue for report
   <b>{$ViewerId || "<unknown>"}</b>. Please enter your password to continue.
 </p>
-<input
-  type="password"
-  class="password"
-  bind:value={password}
-  placeholder="Password for {username}"
-/>
+{#if !loading}
+  <input
+    type="password"
+    class="password"
+    bind:value={password}
+    placeholder="Password for {username}"
+    disabled={loading}
+  />
+{:else}
+  <input type="text" disabled value="Please wait..." />
+{/if}
 <div class="buttons">
-  <button on:click={cancel}>Cancel</button>
-  <button disabled={!username || !$ViewerId || !password} on:click={createIt}>
-    Authorize
+  <button on:click={cancel} disabled={loading}>Cancel</button>
+  <button
+    disabled={!username || !$ViewerId || !password || loading}
+    on:click={createIt}
+  >
+    {#if loading}
+      <div class="spinner tiny" />
+    {:else}
+      Authorize
+    {/if}
   </button>
 </div>
