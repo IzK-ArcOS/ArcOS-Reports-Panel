@@ -21,9 +21,9 @@
   });
 
   async function createIt() {
-    if (!$ViewerId || !password) return;
+    if (!$ViewerId || !password) return (loading = false);
 
-    return (loading = true);
+    loading = true;
 
     const code = await createReportIssue($ViewerId, password);
 
@@ -53,6 +53,7 @@
         break;
     }
 
+    loading = false;
     visible = false;
 
     await sleep(400);
