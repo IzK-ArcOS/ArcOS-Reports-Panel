@@ -20,6 +20,10 @@ export interface Report {
   metaenv: MetaEnv;
   created: string;
   updated: string;
+  comments: string[];
+  expand: {
+    comments: Comment[];
+  };
 }
 
 export type ReportGroups = { [key: string]: ReportRecord[] };
@@ -41,3 +45,30 @@ export interface MetaEnv {
   PROD: boolean;
   SSR: boolean;
 }
+
+export interface Comment {
+  author: string;
+  body: string;
+  created: string;
+  updated: string;
+  id: string;
+  expand: {
+    author: User;
+  };
+}
+
+export interface User {
+  authorname: string;
+  created: string;
+  email: string;
+  emailVisiblity: boolean;
+  fullname: string;
+  id: string;
+  scope: string[];
+  updated: string;
+  username: string;
+  verified: boolean;
+}
+
+export type CommentRecord = Comment & Record;
+export type UserRecord = User & Record;

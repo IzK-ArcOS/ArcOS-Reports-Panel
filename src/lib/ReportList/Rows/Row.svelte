@@ -48,6 +48,12 @@
         ],
       });
     }
+
+    if (report.comments.length) {
+      const firstComment = report.expand.comments[0];
+
+      console.log(`Report ${report.id} got comment from ${firstComment.expand.author.fullname}: ${firstComment.body}`)
+    }
   });
 
   function view() {

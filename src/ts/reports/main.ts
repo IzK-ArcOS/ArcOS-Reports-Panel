@@ -10,11 +10,10 @@ pb.collection("bugrep").subscribe("*", async () => {
 });
 
 export async function GetReports() {
-  return await pb
-    .collection("bugrep")
-    .getFullList<ReportRecord>({
-      $autoCancel: false,
-      sort: "-created",
-      br: "true",
-    });
+  return await pb.collection("bugrep").getFullList<ReportRecord>({
+    $autoCancel: false,
+    sort: "-created",
+    br: "true",
+    expand: "comments.author",
+  });
 }
