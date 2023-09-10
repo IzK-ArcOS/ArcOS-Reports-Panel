@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { getLogo } from "../../ts/branding";
+
   export let minimal: boolean;
 </script>
 
@@ -6,6 +8,7 @@
   {#if !minimal}
     <div class="segment icon" />
   {/if}
+  <div class="segment modeico"><img src={getLogo("release")} alt="" /></div>
   <div class="segment mleft">When?</div>
   <div class="segment grow">What?</div>
   <div class="segment mobile-hide">Who?</div>

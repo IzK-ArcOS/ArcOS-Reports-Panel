@@ -9,6 +9,9 @@
   import Segment from "./Row/Segment.svelte";
   import { Masked, ViewerId } from "../../../ts/ui";
   import { PARAMS } from "../../../ts/env";
+  import { getLogo } from "../../../ts/branding";
+  import ApiSegment from "./Row/ApiSegment.svelte";
+  import ModeIcon from "./Row/ModeIcon.svelte";
 
   export let report: ReportRecord;
   export let minimal: boolean;
@@ -72,29 +75,26 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div
-  class="row"
-  class:solved={report.resolved}
-  class:closed={report.closed}
-  on:click={view}
->
-  {#if !minimal}
-    <Icon {report} />
-  {/if}
-  <Segment mleft nomask c="ts-mobile">{mbTimestamp}</Segment>
-  <Segment mleft nomask c="ts-desktop">{timestamp}</Segment>
-  <Segment grow c="body">
-    {report.body}
-  </Segment>
-  <AuthorSegment {report} />
-  <Segment
-    c="mobile-hide"
-    sad={noApi || api == "localhost"}
-    self={api == "arcdev.arcapi.nl"}
+{#if report}
+  <div
+    class="row"
+    class:solved={report.resolved}
+    class:closed={report.closed}
+    on:click={view}
   >
-    {api}
-  </Segment>
-  {#if !minimal}
-    <Segment mono>{report.id}</Segment>
-  {/if}
-</div>
+    {#if !minimal}
+      <Icon {report} />
+    {/if}
+    <ModeIcon {report} />
+    <Segment mleft nomask c="ts-mobile">{mbTimestamp}</Segment>
+    <Segment mleft nomask c="ts-desktop">{timestamp}</Segment>
+    <Segment grow c="body">
+      {report.body}
+    </Segment>
+    <AuthorSegment {report} />
+    <ApiSegment {api} {noApi} />
+    {#if !minimal}
+      <Segment mono>{report.id}</Segment>
+    {/if}
+  </div>
+{/if}

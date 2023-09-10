@@ -12,8 +12,11 @@ div.viewer div.panels div.leftpanel div.property.client .key {
 
 div.viewer div.panels div.leftpanel div.property.client .value {
   display: flex;
-  align-items: start;
   gap: 25px;
+}
+
+div.viewer div.panels div.leftpanel div.property.client .value img {
+  height: 20px;
 }
 
 div.viewer div.panels div.leftpanel div.property.client .value p.host {
@@ -23,10 +26,23 @@ div.viewer div.panels div.leftpanel div.property.client .value p.host {
 div.viewer div.panels div.leftpanel div.property.client .value div.flags {
   display: grid;
   grid-template-columns: repeat(2, 120px);
-  opacity: 0.5;
+  opacity: 1;
   border-left: var(--bg-border);
   height: 64px;
   padding: 10px 25px;
+}
+
+div.viewer
+  div.panels
+  div.leftpanel
+  div.property.client
+  .value
+  div.flags
+  div.flag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 21px !important;
 }
 
 @media screen and (max-width: 1300px) {

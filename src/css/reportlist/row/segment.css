@@ -12,6 +12,14 @@ div.reportview div.row div.segment {
   align-items: center;
 }
 
+div.reportview div.row div.segment.modeico {
+  --w: 24px !important;
+}
+
+div.reportview div.row div.segment.modeico img {
+  height: 24px;
+}
+
 div.reportview div.row div.segment.mleft {
   margin-left: auto;
 }
