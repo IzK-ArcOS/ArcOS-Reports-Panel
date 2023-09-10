@@ -39,5 +39,4 @@
   <div class="status" class:error={!$GitConnected} class:good={$GitConnected}>
     GitHub
   </div>
-  <div class="status" class:warn={!$Masked} class:good={$Masked}>Locked</div>
 </div>

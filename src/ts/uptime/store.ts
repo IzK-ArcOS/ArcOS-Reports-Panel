@@ -8,6 +8,7 @@ export const UPTIME_CAPTIONS = {
   "1": "Community",
   "3": "Enderman's Lair",
   "6": "Linfosys",
+  "12": "Issue API",
   "8": "Mail In",
   "9": "Mail Out",
 };
