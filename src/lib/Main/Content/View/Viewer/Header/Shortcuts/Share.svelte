@@ -10,7 +10,7 @@
       message: `Please be so kind to choose how to copy Bug Report ${data.id} to your clipboard. Click Cancel to leave the clipboard untouched.`,
       buttons: [
         {
-          caption: "Mark Down",
+          caption: "MD",
           action() {
             navigator.clipboard.writeText(
               `[\`${data.id}\`](<https://bugrep.arcapi.nl/?rid=${data.id}>)`
@@ -23,6 +23,12 @@
             navigator.clipboard.writeText(
               `https://bugrep.arcapi.nl/?rid=${data.id}`
             );
+          },
+        },
+        {
+          caption: "IsID",
+          action() {
+            navigator.clipboard.writeText(data.issueid);
           },
         },
         {

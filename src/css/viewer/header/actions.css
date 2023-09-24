@@ -8,6 +8,7 @@ div.viewer-header div.actions button {
   border-left: var(--win-border);
   width: 100px;
   background-color: var(--bg);
+  padding: 0;
 }
 
 div.viewer-header div.actions button:disabled {
