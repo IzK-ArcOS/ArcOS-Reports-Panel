@@ -6,12 +6,14 @@
   import { Masked, ViewerId } from "../../ts/ui";
   import Loader from "../Loader.svelte";
   import { navigate } from "svelte-navigator";
+  import sleep from "../../ts/sleep";
 
   let loading = false;
 
   onMount(async () => {
     loading = true;
     Reports.set(await GetReports());
+    await sleep(100);
     startLiveUptime();
 
     const params = new URLSearchParams(location.search);
