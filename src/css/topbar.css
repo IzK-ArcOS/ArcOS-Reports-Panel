@@ -1,6 +1,7 @@
 @import url("./topbar/controls.css");
 @import url("./topbar/title.css");
 @import url("./topbar/left.css");
+@import url("./topbar/live.css");
 
 div.topbar div.controls button:active {
   opacity: 0.2;

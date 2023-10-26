@@ -19,6 +19,10 @@
     <!-- <img src={logo} alt="" class="icon" /> -->
     <span>BugRep</span>
   </p>
+  <div class="live">
+    <div class="dot" />
+    <span>Live</span>
+  </div>
   <div class="controls">
     {#if $Token}
       <Controls />

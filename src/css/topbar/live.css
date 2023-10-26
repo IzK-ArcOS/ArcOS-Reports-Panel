@@ -1,0 +1,63 @@
+div.topbar div.live {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+div.topbar div.live div.dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--clr-red-fg);
+  border-radius: 50%;
+  animation: blink infinite 2s;
+  position: relative;
+}
+
+div.topbar div.live div.dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-red-fg);
+  opacity: 0.4;
+  border-radius: 50%;
+  z-index: -1;
+  animation: radius infinite 2s;
+}
+
+div.topbar div.live span {
+  color: var(--clr-red-fg);
+  font-size: 12px;
+  font-weight: bold;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes radius {
+  20% {
+    opacity: 1;
+    scale: 1;
+  }
+  80% {
+    scale: 2;
+  }
+  90% {
+    opacity: 0;
+  }
+}
