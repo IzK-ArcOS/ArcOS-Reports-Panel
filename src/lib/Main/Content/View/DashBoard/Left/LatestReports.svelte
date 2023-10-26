@@ -8,15 +8,18 @@
 
   let groupView = false;
   let loading = false;
+  let init = false;
 
   const toggle = () => (groupView = !groupView);
 
   ViewerId.subscribe(async (v) => {
-    if (!v) {
+    if (!v && init) {
       loading = true;
       Reports.set(await GetReports());
       loading = false;
     }
+
+    if (!v) init = true;
   });
 </script>
 

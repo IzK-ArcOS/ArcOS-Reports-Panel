@@ -3,7 +3,7 @@
   import { PARAMS } from "../../../../ts/env";
   import { pb } from "../../../../ts/pb/main";
   import type { Report } from "../../../../ts/reports/interface";
-  import { GetReports } from "../../../../ts/reports/main";
+  import { GetReports, Reports } from "../../../../ts/reports/main";
   import { archiveReport } from "../../../../ts/reports/mutate";
   import sleep from "../../../../ts/sleep";
   import { ViewerId } from "../../../../ts/ui";
@@ -23,7 +23,7 @@
 
     await sleep(100);
 
-    data = (await GetReports()).filter((a) => a.id == $ViewerId)[0];
+    data = $Reports.filter((a) => a.id == $ViewerId)[0];
 
     if (!data && $ViewerId && $ViewerId != null)
       Dialog({

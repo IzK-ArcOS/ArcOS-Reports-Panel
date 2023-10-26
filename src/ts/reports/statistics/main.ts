@@ -1,9 +1,10 @@
+import { get } from "svelte/store";
 import type { ReportRecord } from "../interface";
-import { GetReports } from "../main";
+import { Reports } from "../main";
 import type { ReportStatistics } from "./interface";
 
-export async function getReportsStats(): Promise<ReportStatistics> {
-  const reports = await GetReports();
+export async function getReportsStats(v): Promise<ReportStatistics> {
+  const reports = v || get(Reports);
 
   if (!reports) return;
 

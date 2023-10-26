@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { Reports } from "../../../../../../ts/reports/main";
+  import type { ReportStatistics } from "../../../../../../ts/reports/statistics/interface";
   import { getReportsStats } from "../../../../../../ts/reports/statistics/main";
   import Stat from "./Statistics/stat.svelte";
-  import type { ReportStatistics } from "../../../../../../ts/reports/statistics/interface";
-  import { Reports } from "../../../../../../ts/reports/main";
 
   let stats: ReportStatistics;
 
-  Reports.subscribe(async () => {
-    stats = await getReportsStats();
+  Reports.subscribe(async (v) => {
+    if (!v) return;
+    stats = await getReportsStats(v);
   });
 </script>
 
