@@ -1,9 +1,53 @@
 div.viewer-body {
   height: calc(100% - 216px);
+  display: flex;
+  flex-direction: column;
+}
+
+div.viewer-body textarea {
+  flex-grow: 1;
+}
+
+div.issue-notice {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--bg-border);
+  height: 70px;
+  min-height: 70px;
+  overflow: hidden;
+}
+
+div.issue-notice img {
+  height: 48px;
+  margin: 10px;
+  margin-right: 20px;
+}
+
+div.issue-notice p {
+  margin: 0;
+}
+
+div.issue-notice p.title {
+  font-weight: bold;
+}
+
+div.issue-notice p.description {
+  opacity: 0.5;
+}
+
+div.issue-notice button {
+  margin-left: auto;
+  width: 40px;
+  height: inherit;
+  font-size: 18px;
+  padding: 0;
+  border-left: var(--bg-border);
+  border-bottom: var(--bg-border);
+  background-color: var(--button-active-bg);
 }
 
 @media screen and (max-width: 1200px) {
   div.viewer-body {
-    height: 200px;
+    height: 250px;
   }
 }

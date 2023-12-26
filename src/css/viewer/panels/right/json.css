@@ -25,12 +25,12 @@ div.viewer div.panels div.rightpanel div.json div.object textarea {
 @media screen and (max-width: 1300px) {
   div.viewer div.panels div.rightpanel div.json {
     flex-direction: column;
-    height: 400px !important;
+    height: 450px !important;
   }
 
   div.viewer div.panels div.rightpanel div.json > div {
     width: 100% !important;
-    height: 200px;
+    height: 250px;
     border-left: none !important;
   }
 

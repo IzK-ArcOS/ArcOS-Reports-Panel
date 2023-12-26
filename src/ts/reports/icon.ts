@@ -6,11 +6,11 @@ import type { Report } from "./interface";
 import { getReportIssue } from "./issues";
 
 export async function getIcon(report: Report): Promise<[string, string]> {
+  if (await getReportIssue(report.id)) return ["issued", issuedIcon];
+
   if (report.closed) return ["archived", closedIcon];
 
   if (report.resolved) return ["resolved", resolvedIcon];
-
-  if (await getReportIssue(report.id)) return ["issued", issuedIcon];
 
   return ["normal", normalIcon];
 }

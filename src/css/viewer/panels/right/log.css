@@ -24,10 +24,10 @@ div.viewer div.panels div.rightpanel div.log h1 span.right {
 
 @media screen and (max-width: 1300px) {
   div.viewer div.panels div.rightpanel div.log {
-    height: 232px !important;
+    height: 270px !important;
   }
 
   div.viewer div.panels div.rightpanel div.log textarea {
-    height: 200px;
+    height: 238px;
   }
 }
