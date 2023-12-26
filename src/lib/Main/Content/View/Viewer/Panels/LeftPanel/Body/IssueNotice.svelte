@@ -28,7 +28,9 @@
 
 {#if issueData}
   <div class="issue-notice">
-    <img src={issueData.assignee.avatar_url || icon} alt="" class="icon" />
+    {#if issueData.assignee}
+      <img src={issueData.assignee.avatar_url || icon} alt="" class="icon" />
+    {/if}
     <div class="text">
       <p class="title">This report has been issue'd!</p>
       <p class="description">{issueData.title}</p>
