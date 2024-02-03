@@ -13,13 +13,13 @@
   const toggle = () => (groupView = !groupView);
 
   ViewerId.subscribe(async (v) => {
+    if (!v) init = true;
+
     if (!v && init) {
       loading = true;
       Reports.set(await GetReports());
       loading = false;
     }
-
-    if (!v) init = true;
   });
 </script>
 
