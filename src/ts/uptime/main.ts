@@ -28,6 +28,8 @@ export async function getUptimes(): Promise<Uptime> {
 }
 
 export function startLiveUptime() {
+  return; // kuma is down anyway
+
   async function tick() {
     LiveUptimes.set(await getUptimes());
   }

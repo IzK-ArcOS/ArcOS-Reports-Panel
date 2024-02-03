@@ -25,10 +25,10 @@
 
     loading = true;
 
-    const code = await createReportIssue($ViewerId, password);
-
     let title: string;
     let message: string;
+
+    const code = await createReportIssue($ViewerId, password);
 
     switch (code) {
       case 404:
@@ -45,6 +45,12 @@
         title = "Could not log you in";
         message =
           "Either you entered your password wrong or you're missing the BRISSUE scope. Please check with The Board if it's the latter.";
+        break;
+      case 522:
+      case 999:
+        title = "BrIssue is down";
+        message =
+          "Can't reach the BrIssue API. Please check in with the Board to see if it's actually down, or if the frontend done goofed.";
         break;
       default:
         title = "Created!";

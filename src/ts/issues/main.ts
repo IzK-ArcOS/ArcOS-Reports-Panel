@@ -19,7 +19,7 @@ export async function createReportIssue(
   } catch (e) {
     const err = e as AxiosError;
 
-    status = err.response ? err.response.status || 200 : 200;
+    status = err.response ? err.response.status || 999 : 999;
   }
 
   return status;
