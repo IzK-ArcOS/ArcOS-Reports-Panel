@@ -5,5 +5,5 @@
 
 <div class="left">
   <LatestReports />
-  <Status />
+  <!-- <Status /> -->
 </div>

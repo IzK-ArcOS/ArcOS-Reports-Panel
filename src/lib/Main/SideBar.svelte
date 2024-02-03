@@ -19,5 +19,4 @@
 <div class="sidebar" class:opened={$sideBarOpened}>
   <Statistics />
   <Notifications />
-  <Status />
 </div>

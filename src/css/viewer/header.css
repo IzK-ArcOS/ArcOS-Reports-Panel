@@ -56,6 +56,7 @@ div.viewer div.viewer-header button.material-icons-round {
   font-size: 18px;
   background-color: transparent;
   border-left: var(--bg-border);
+  min-width: 40px;
 }
 
 div.viewer div.viewer-header button.material-icons-round:nth-child(3) {

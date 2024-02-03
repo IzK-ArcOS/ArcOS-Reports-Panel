@@ -77,6 +77,7 @@ div.topbar div.controls button.material-icons-round {
   border: none;
   color: var(--fg);
   border-left: var(--bg-border);
+  min-width: 40px;
 }
 
 div.topbar div.controls button.material-icons-round:hover {

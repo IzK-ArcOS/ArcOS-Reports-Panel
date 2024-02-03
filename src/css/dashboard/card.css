@@ -39,7 +39,7 @@ div.dashboard div.card.statistics::before {
 }
 
 div.dashboard div.card.notifications::before {
-  content: "Notifications";
+  content: "Audit Log";
 }
 
 div.dashboard div.card.latest-reports::before {
