@@ -39,6 +39,15 @@
   function toggleForgot() {
     forgot = !forgot;
   }
+
+  function getAccess() {
+    Dialog({
+      title: "Most likely... You can't.",
+      message:
+        "If you're not on the ArcOS Team, you can't get access to this page. If you are, and you don't have access, than Izaak forgot to get you an account, and you should contact him. Sorry.",
+      buttons: [{ caption: "Okay", action() {} }],
+    });
+  }
 </script>
 
 <div class="login-wrapper">
@@ -65,5 +74,8 @@
       </div>
     </form>
   </div>
-  <div class="footer">ArcOS Confidential - Licensed under GPLv3</div>
+  <div class="footer">
+    ArcOS Confidential - Licensed under GPLv3 -
+    <button class="link" on:click={getAccess}> Get Access </button>
+  </div>
 </div>
