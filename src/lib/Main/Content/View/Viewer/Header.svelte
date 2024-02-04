@@ -12,7 +12,8 @@
       <Icon report={data} />{data.title}
     </div>
     <div class="id">{data.id}</div>
-    <Shortcuts {data} />
   </span>
+  <Shortcuts {data} />
+
   <Actions {data} />
 </div>

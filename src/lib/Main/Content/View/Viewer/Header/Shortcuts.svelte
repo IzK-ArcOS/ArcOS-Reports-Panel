@@ -8,7 +8,9 @@
   export let data: Report;
 </script>
 
-<Share {data} />
-<CreateIssue />
-<Download {data} />
-<UserData {data} />
+<div class="shortcuts">
+  <Share {data} />
+  <CreateIssue />
+  <Download {data} />
+  <UserData {data} />
+</div>

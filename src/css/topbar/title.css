@@ -32,6 +32,7 @@ div.topbar p.title * {
   font-weight: bold;
   margin: 0;
   height: fit-content;
+  font-family: "Arvo", serif;
 }
 
 div.topbar p.title img.icon {
