@@ -11,8 +11,6 @@ export function Notification(notif: Notif) {
 
   NotificationStore.set(store);
 
-  console.log(`[BUGREP] ${notif.title}: ${notif.message}`);
-
   return id;
 }
 

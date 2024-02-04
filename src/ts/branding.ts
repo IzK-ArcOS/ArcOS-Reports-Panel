@@ -18,7 +18,6 @@ type MODE =
   | "uwu";
 
 export function getLogo(mode: MODE) {
-  console.log(mode);
   return (
     { admin, development, esr, rc, siege, release, unstable, uwu }[mode] ||
     release

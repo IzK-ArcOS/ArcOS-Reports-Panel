@@ -10,8 +10,6 @@ export function Dialog(notif: Dialog) {
 
   DialogStore.set(store);
 
-  console.log(`[BUGREP] ${notif.title}: ${notif.message}`);
-
   return id;
 }
 
